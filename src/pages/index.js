@@ -144,7 +144,7 @@ const IndexPage = ({ data }) => {
       <div className="w-full text-xl md:text-2xl text-gray-800 leading-normal rounded-t mx-auto px-6 pt-32">
         {/* Lead Card */}
         <div
-          className="flex flex-col lg:flex-row justify-between pt-12 pb-6 border-b fadeInUp"
+          className="flex flex-col lg:flex-row justify-between pt-12 pb-6 lg:border-b fadeInUp"
           style={{ animationDelay: `${1 + 1 * 0.1}s` }}
         >
           <div className="flex flex-wrap justify-center lg:w-3/5 bg-white rounded overflow-hidden">
@@ -223,7 +223,7 @@ const IndexPage = ({ data }) => {
         {/* Posts Container */}
         <div className="flex flex-wrap relative justify-between pt-6 -mx-6">
           {/* 2/3 col */}
-          <div className="w-full lg:w-3/5 p-6 flex flex-col flex-grow flex-shrink border-b">
+          <div className="w-full lg:w-3/5 p-6 flex flex-col flex-grow flex-shrink lg:border-b">
             <div className="flex-1 bg-white rounded-t rounded-b-none overflow-hidden">
               <a
                 href="#"
@@ -257,7 +257,7 @@ const IndexPage = ({ data }) => {
             </div>
           </div>
           {/* 1/3 col */}
-          <div className="w-full lg:w-2/5 p-6 flex flex-col flex-grow flex-shrink border-b">
+          <div className="w-full lg:w-2/5 p-6 flex flex-col flex-grow flex-shrink lg:border-b">
             <div className="mb-4 pb-2 text-xl border-b">
               <h5 className="font-thin text-text-xl">Top In Factchecks</h5>
             </div>
