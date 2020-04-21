@@ -240,7 +240,13 @@ const IndexPage = ({ data }) => {
                   Lorem ipsum dolor sit amet.
                 </div>
                 <p className="text-gray-800 font-sans text-base px-6 mb-5">
-                  Lorem ipsum eu nunc commodo posuere et sit amet ligula.
+                  Lorem ipsum eu nunc commodo posuere et sit amet ligula.Lorem
+                  ipsum eu nunc commodo posuere et sit amet ligula.Lorem ipsum
+                  eu nunc commodo posuere et sit amet ligula.Lorem ipsum eu nunc
+                  commodo posuere et sit amet ligula. Lorem ipsum eu nunc
+                  commodo posuere et sit amet ligula.Lorem ipsum eu nunc commodo
+                  posuere et sit amet ligula.Lorem ipsum eu nunc commodo posuere
+                  et sit amet.
                 </p>
               </a>
               <div className="flex-none mt-auto py-4 px-6">
