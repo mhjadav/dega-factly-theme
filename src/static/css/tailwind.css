@@ -19,6 +19,22 @@ div::-webkit-scrollbar-thumb {
     outline: 1px solid red;
 }
 
+body, html{
+    scrollbar-width: thin;
+    scrollbar-color: #e83745 white;
+}
+body::-webkit-scrollbar {
+    width: 8px;
+}
+body::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px white;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #e83745;
+    outline: 1px solid #e83745;
+}
+
 .fadeInUp {
     animation-name: fadeInUp;
     animation-duration: 0.45s;
