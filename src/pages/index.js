@@ -163,54 +163,56 @@ const IndexPage = ({ data }) => {
               <div className="relative">
                 <div className="w-full flex-1 bg:white sm:bg-black opacity-50 static sm:absolute bottom-0 overflow-hidden">
                   <div className="w-full font-bold text-xl leading-tight text-lg sm:text-white px-4 py-2">
-                    👋 Welcome Factly Media Company
+                    👋 Lorem ipsum dolor sit amet.
                   </div>
                 </div>
               </div>
             </a>
             {[1, 2].map(item => (
-              <a
-                href="/"
-                className="w:full flex flex-row flex-wrap sm:flex-no-wrap no-underline hover:no-underline px-2 mb-6"
-              >
-                <div className="sm:w-1/4 flex justify-center">
-                  <img
-                    src={`https://source.unsplash.com/collection/${item +
-                      1000}/800x200`}
-                    alt={item}
-                    className="h-32 rounded object-cover"
-                  />
-                </div>
-                <div className="sm:w-3/4 flex flex-col py-4 sm:py-0 sm:px-4">
-                  <div className="w-full font-bold font-sans text-xl leading-tight leading-tight text-gray-800 pb-2">
-                    Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
-                    Lorem ipsum dolor sit amet.
+              <div className="w:full flex flex-col no-underline hover:no-underline px-2 mb-6">
+                <a
+                  href="/"
+                  className="w:full flex flex-row flex-wrap sm:flex-no-wrap no-underline hover:no-underline"
+                >
+                  <div className="sm:w-1/4 flex justify-center">
+                    <img
+                      src={`https://source.unsplash.com/collection/${item +
+                        1000}/800x200`}
+                      alt={item}
+                      className="h-32 rounded object-cover"
+                    />
                   </div>
-                  <p className="text-gray-800 font-sans text-lg">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  </p>
-                  <div className="flex-none mt-auto py-4 bg-white">
-                    <div className="flex items-center justify-between">
-                      <div className="flex justify-center items-center">
-                        <img
-                          className="w-8 h-8 rounded-full mr-2 avatar"
-                          data-tippy-content="Author Name"
-                          src="http://i.pravatar.cc/300"
-                          alt="Avatar of Author"
-                        />
-                        <span className="text-gray-600 text-xs md:text-sm">
-                          John Doe
-                        </span>
-                      </div>
-                      <p className="text-gray-600 text-xs md:text-sm">
-                        1 MIN READ
-                      </p>
+                  <div className="sm:w-3/4 flex flex-col py-4 sm:py-0 sm:px-4">
+                    <div className="w-full font-bold font-sans text-xl leading-tight leading-tight text-gray-800 pb-2">
+                      Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+                      Lorem ipsum dolor sit amet.
                     </div>
+                    <p className="text-gray-800 font-sans text-lg">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </p>
+                  </div>
+                </a>
+                <div className="flex-none mt-auto py-4 pr-4">
+                  <div className="flex items-center justify-between">
+                    <div className="flex justify-center items-center">
+                      <img
+                        className="w-8 h-8 rounded-full mr-2 avatar"
+                        data-tippy-content="Author Name"
+                        src="http://i.pravatar.cc/300"
+                        alt="Avatar of Author"
+                      />
+                      <span className="text-gray-600 text-xs md:text-sm">
+                        John Doe
+                      </span>
+                    </div>
+                    <p className="text-gray-600 text-xs md:text-sm">
+                      1 MIN READ
+                    </p>
                   </div>
                 </div>
-              </a>
+              </div>
             ))}
           </div>
           <div className="w-full p-0 lg:px-6 lg:w-2/5 flex flex-col overflow-hidden">
