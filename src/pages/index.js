@@ -182,7 +182,7 @@ const IndexPage = ({ data }) => {
                   />
                 </div>
                 <div className="sm:w-3/4 flex flex-col py-4 sm:py-0 sm:px-4">
-                  <div className="w-full font-bold font-sans text-xl leading-tight leading-tight text-gray-800 pb-4">
+                  <div className="w-full font-bold font-sans text-xl leading-tight leading-tight text-gray-800 pb-2">
                     Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
                     Lorem ipsum dolor sit amet.
                   </div>
@@ -304,7 +304,7 @@ const IndexPage = ({ data }) => {
                     <p className="w-full text-gray-600 text-xs md:text-sm">
                       #TRENDING #INTEREST
                     </p>
-                    <div className="w-full font-bold font-sans text-xl leading-tight text-gray-800 pb-4">
+                    <div className="w-full font-bold font-sans text-xl leading-tight text-gray-800 pb-2">
                       Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
                       Lorem ipsum dolor sit amet.
                     </div>

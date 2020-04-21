@@ -19,7 +19,7 @@ function ListItems({ item, index, image = true }) {
           </div>
         )}
         <div className={`${image ? 'w-3/4' : 'w-full'} flex flex-col p-0`}>
-          <div className="w-full font-bold font-sans text-lg text-gray-800 pb-4">
+          <div className="w-full font-bold font-sans text-lg text-gray-800 pb-2">
             {item.title}
           </div>
           <p className="text-gray-800 font-sans text-lg">{item.excerpt}</p>
