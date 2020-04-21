@@ -18,3 +18,22 @@ div::-webkit-scrollbar-thumb {
     background-color: red;
     outline: 1px solid red;
 }
+
+.fadeInUp {
+    animation-name: fadeInUp;
+    animation-duration: 0.45s;
+    animation-fill-mode: both;
+  }
+  
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+  
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  

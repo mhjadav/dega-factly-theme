@@ -52,7 +52,10 @@ const Layout = props => (
             link={[{ rel: 'canonical', href: siteMetadata.siteUrl }]}
           >
             <html lang={siteMetadata.lang} />
-            <body className="bg-white text-gray-900 leading-normal mx-auto w-full max-w-screen-xl "></body>
+            <body
+              className="bg-white text-gray-900 leading-normal mx-auto w-full max-w-screen-xl fadeInUp"
+              style={{ animationDelay: `${1 + 1 * 0.1}s` }}
+            ></body>
           </Helmet>
           <Navbar></Navbar>
           {children}
