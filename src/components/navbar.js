@@ -7,7 +7,10 @@ const menuItems = [1, 2, 3, 4, 5, 6];
 export default function Navbar({ fixed }) {
   const [navbarOpen, setNavbarOpen] = React.useState(false);
   return (
-    <div className="flex flex-col fixed top-0 inset-x-0 z-100 bg-white shadow-md z-10">
+    <div
+      className="flex flex-col fixed top-0 inset-x-0 z-100 bg-white shadow-md z-10 fadeInUp"
+      style={{ animationDelay: `${1 + 1 * 0.1}s` }}
+    >
       <div className="w-full max-w-screen-xl relative mx-auto px-6">
         <header className="sm:flex border-b sm:border-0 sm:justify-between sm:items-center sm:px-4 sm:py-3">
           <div className="flex items-center justify-between px-4 py-3 sm:p-0">

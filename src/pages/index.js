@@ -147,7 +147,10 @@ const IndexPage = ({ data }) => {
       >
         <div className="w-full text-xl md:text-2xl text-gray-800 leading-normal rounded-t mx-auto px-6 pt-32">
           {/* Lead Card */}
-          <div className="flex flex-col lg:flex-row justify-between pt-12 pb-6 border-b">
+          <div
+            className="flex flex-col lg:flex-row justify-between pt-12 pb-6 border-b fadeInUp"
+            style={{ animationDelay: `${1 + 1 * 0.1}s` }}
+          >
             <div className="flex flex-wrap justify-center lg:w-3/5 bg-white rounded overflow-hidden">
               <a
                 href="/"
