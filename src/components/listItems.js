@@ -19,10 +19,10 @@ function ListItems({ item, index, image = true }) {
           </div>
         )}
         <div className={`${image ? 'w-3/4' : 'w-full'} flex flex-col p-0`}>
-          <div className="w-full font-bold font-sans text-base text-gray-800 pb-4">
+          <div className="w-full font-bold font-sans text-lg text-gray-800 pb-4">
             {item.title}
           </div>
-          <p className="text-gray-800 font-sans text-sm">{item.excerpt}</p>
+          <p className="text-gray-800 font-sans text-lg">{item.excerpt}</p>
           <div className="flex-none mt-auto py-4 bg-white">
             <div className="flex items-center justify-between">
               <div className="flex justify-center items-center">

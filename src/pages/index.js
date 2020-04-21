@@ -141,7 +141,7 @@ const IndexPage = ({ data }) => {
 
   return (
     <Layout>
-      <div className="w-full text-xl md:text-2xl text-gray-800 leading-normal rounded-t mx-auto px-6 pt-32">
+      <div className="w-full text-xl leading-tight md:text-2xl text-gray-800 leading-normal rounded-t mx-auto px-6 pt-32">
         {/* Lead Card */}
         <div
           className="flex flex-col lg:flex-row justify-between pt-12 pb-6 lg:border-b fadeInUp"
@@ -162,8 +162,8 @@ const IndexPage = ({ data }) => {
               </div>
               <div className="relative">
                 <div className="w-full flex-1 bg:white sm:bg-black opacity-50 static sm:absolute bottom-0 overflow-hidden">
-                  <div className="w-full font-bold text-base text-base sm:text-white px-4 py-2">
-                    👋 Welcome fellow Tailwind CSS and Ghost fan
+                  <div className="w-full font-bold text-xl leading-tight text-lg sm:text-white px-4 py-2">
+                    👋 Welcome Factly Media Company
                   </div>
                 </div>
               </div>
@@ -182,11 +182,11 @@ const IndexPage = ({ data }) => {
                   />
                 </div>
                 <div className="sm:w-3/4 flex flex-col py-4 sm:py-0 sm:px-4">
-                  <div className="w-full font-bold font-sans text-base text-gray-800 pb-4">
+                  <div className="w-full font-bold font-sans text-xl leading-tight leading-tight text-gray-800 pb-4">
                     Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
                     Lorem ipsum dolor sit amet.
                   </div>
-                  <p className="text-gray-800 font-sans text-sm">
+                  <p className="text-gray-800 font-sans text-lg">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -236,10 +236,10 @@ const IndexPage = ({ data }) => {
                 <p className="w-full text-gray-600 text-xs md:text-sm px-6">
                   GETTING STARTED
                 </p>
-                <div className="w-full font-bold text-xl text-gray-900 px-6">
+                <div className="w-full font-bold text-xl leading-tight text-gray-900 px-6">
                   Lorem ipsum dolor sit amet.
                 </div>
-                <p className="text-gray-800 font-sans text-base px-6 mb-5">
+                <p className="text-gray-800 font-sans text-lg px-6 my-6">
                   Lorem ipsum eu nunc commodo posuere et sit amet ligula.Lorem
                   ipsum eu nunc commodo posuere et sit amet ligula.Lorem ipsum
                   eu nunc commodo posuere et sit amet ligula.Lorem ipsum eu nunc
@@ -264,8 +264,10 @@ const IndexPage = ({ data }) => {
           </div>
           {/* 1/3 col */}
           <div className="w-full lg:w-2/5 p-6 flex flex-col flex-grow flex-shrink">
-            <div className="mb-4 pb-4 text-xl border-b">
-              <h5 className="font-thin text-text-xl">Top In Factchecks</h5>
+            <div className="mb-4 pb-4 border-b">
+              <h5 className="font-thin text-xl leading-tight">
+                Top In Factchecks
+              </h5>
             </div>
             {items.slice(1, 6).map((item, index) => (
               <ListItems item={item} index={index} image={false} />
@@ -302,11 +304,11 @@ const IndexPage = ({ data }) => {
                     <p className="w-full text-gray-600 text-xs md:text-sm">
                       #TRENDING #INTEREST
                     </p>
-                    <div className="w-full font-bold font-sans text-base text-gray-800 pb-4">
+                    <div className="w-full font-bold font-sans text-xl leading-tight text-gray-800 pb-4">
                       Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
                       Lorem ipsum dolor sit amet.
                     </div>
-                    <p className="text-gray-800 font-sans text-sm">
+                    <p className="text-gray-800 font-sans text-lg">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -337,8 +339,10 @@ const IndexPage = ({ data }) => {
           <div className="w-full lg:w-2/5 flex flex-col flex-grow flex-shrink order-1 lg:order-2 lg:border-l-2 border-b-2 lg:border-b-0 p-6 mt-6">
             <div ref={sidebarElement} className={`${sidebarDockedBottom}`}>
               <div className="block">
-                <div className="mb-4 pb-4 text-xl border-b">
-                  <h5 className="font-thin text-text-xl">Top In Factchecks</h5>
+                <div className="mb-4 pb-4 border-b">
+                  <h5 className="font-thin text-xl leading-tight">
+                    Top In Factchecks
+                  </h5>
                 </div>
                 {items.slice(1, 6).map((item, index) => (
                   <ListItems item={item} index={index} />
@@ -346,8 +350,10 @@ const IndexPage = ({ data }) => {
               </div>
 
               <div className="block">
-                <div className="mb-4 pb-4 text-xl border-b">
-                  <h5 className="font-thin text-text-xl">Top In Factchecks</h5>
+                <div className="mb-4 pb-4 border-b">
+                  <h5 className="font-thin text-xl leading-tight">
+                    Top In Factchecks
+                  </h5>
                 </div>
                 {items.slice(1, 6).map((item, index) => (
                   <ListItems item={item} index={index} />
@@ -355,8 +361,10 @@ const IndexPage = ({ data }) => {
               </div>
 
               <div className="block">
-                <div className="mb-4 pb-4 text-xl border-b">
-                  <h5 className="font-thin text-text-xl">Top In Factchecks</h5>
+                <div className="mb-4 pb-4 border-b">
+                  <h5 className="font-thin text-xl leading-tight">
+                    Top In Factchecks
+                  </h5>
                 </div>
                 {items.slice(1, 6).map((item, index) => (
                   <ListItems item={item} index={index} />
