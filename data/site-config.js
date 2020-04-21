@@ -1,15 +1,15 @@
 module.exports = {
-  name: 'Nirlom Gatsby Starter',
-  shortName: 'Gatsby Starter',
-  title: 'Nirlom Gatsby Starter',
-  logo: `${__dirname}/../src/static/images/logo/nirlom.png`,
-  siteUrl: 'https://nirlom.com',
-  keyword: 'Nirlom, Nirlom Gatsby Starter',
-  description: 'Nirlom Gatsby Starter',
+  name: 'Dega Frontend',
+  shortName: 'Dega',
+  title: 'Dega Frontend Portal',
+  logo: `${__dirname}/../src/static/images/logo/logo.png`,
+  siteUrl: 'https://factly.in',
+  keyword: '',
+  description: 'Factly CMS',
   type: 'website',
-  author: 'Nirlom',
+  author: 'Mahipat',
   lang: 'en',
-  googleAnalyticsID: 'UA-139553191-1', // GA tracking ID.
+  googleAnalyticsID: '', // GA tracking ID.
   backgroundColor: '#fff',
   themeColor: '#fff',
   favicon: `${__dirname}/../src/static/images/favicon.png`

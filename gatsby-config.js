@@ -1,6 +1,13 @@
 require('dotenv').config();
 const path = require('path');
 
+const resolveConfig = require('tailwindcss/resolveConfig');
+const tailwindConfig = require('./tailwind.config.js');
+
+const fullConfig = resolveConfig(tailwindConfig);
+const tailwind = require(`tailwindcss`)(tailwindConfig);
+const autoPrefixer = require(`autoprefixer`);
+const cssnano = require(`cssnano`);
 const {
   name,
   shortName,
@@ -33,6 +40,16 @@ module.exports = {
       options: {
         trackingId: googleAnalyticsID,
         head: true
+      }
+    },
+    {
+      resolve: `gatsby-plugin-postcss`,
+      options: {
+        postCssPlugins: [
+          tailwind,
+          autoPrefixer,
+          ...(process.env.NODE_ENV === `production` ? [] : [cssnano])
+        ]
       }
     },
     {

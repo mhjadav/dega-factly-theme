@@ -2,9 +2,9 @@ import React from 'react';
 import { graphql, StaticQuery } from 'gatsby';
 import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
-import '../static/css/style.css';
-
-import ImportScripts from './importScripts';
+import '../static/css/tailwind.css';
+import Navbar from './navbar';
+import Footer from './footer';
 
 const Layout = props => (
   <StaticQuery
@@ -52,9 +52,11 @@ const Layout = props => (
             link={[{ rel: 'canonical', href: siteMetadata.siteUrl }]}
           >
             <html lang={siteMetadata.lang} />
+            <body className="bg-white text-gray-900 leading-normal mx-auto w-full max-w-screen-xl "></body>
           </Helmet>
-          <main>{children}</main>
-          <ImportScripts />
+          <Navbar></Navbar>
+          {children}
+          {/* <Footer></Footer> */}
         </>
       );
     }}
