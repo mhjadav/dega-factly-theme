@@ -150,7 +150,7 @@ const IndexPage = ({ data }) => {
           <div className="flex flex-wrap justify-center lg:w-3/5 bg-white rounded overflow-hidden">
             <a
               href="/"
-              className="w:full flex flex-col flex-1 no-underline hover:no-underline px-2 mb-4 shadow-lg sm:shadow-none"
+              className="w:full flex flex-col flex-1 no-underline hover:no-underline px-2 mb-6 shadow-lg sm:shadow-none"
             >
               <div className="w-full rounded-t">
                 <img
@@ -171,7 +171,7 @@ const IndexPage = ({ data }) => {
             {[1, 2].map(item => (
               <a
                 href="/"
-                className="w:full flex flex-row flex-wrap sm:flex-no-wrap no-underline hover:no-underline px-2 mb-4"
+                className="w:full flex flex-row flex-wrap sm:flex-no-wrap no-underline hover:no-underline px-2 mb-6"
               >
                 <div className="sm:w-1/4 flex justify-center">
                   <img
@@ -221,10 +221,10 @@ const IndexPage = ({ data }) => {
         </div>
         {/* /Lead Card */}
         {/* Posts Container */}
-        <div className="flex flex-wrap relative justify-between pt-6 -mx-6">
+        <div className="flex flex-wrap relative justify-between pt-8 -mx-6">
           {/* 2/3 col */}
-          <div className="w-full lg:w-3/5 p-6 flex flex-col flex-grow flex-shrink lg:border-b">
-            <div className="flex-1 bg-white rounded-t rounded-b-none overflow-hidden">
+          <div className="w-full lg:w-3/5 p-6 flex flex-col flex-grow flex-shrink">
+            <div className="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow-lg">
               <a
                 href="#"
                 className="flex flex-wrap no-underline hover:no-underline"
@@ -243,22 +243,22 @@ const IndexPage = ({ data }) => {
                   Lorem ipsum eu nunc commodo posuere et sit amet ligula.
                 </p>
               </a>
-            </div>
-            <div className="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden p-6">
-              <div className="flex items-center justify-between">
-                <img
-                  className="w-8 h-8 rounded-full mr-4 avatar"
-                  data-tippy-content="Author Name"
-                  src="http://i.pravatar.cc/300"
-                  alt="Avatar of Author"
-                />
-                <p className="text-gray-600 text-xs md:text-sm">1 MIN READ</p>
+              <div className="flex-none mt-auto py-4 px-6">
+                <div className="flex items-center justify-between">
+                  <img
+                    className="w-8 h-8 rounded-full mr-4 avatar"
+                    data-tippy-content="Author Name"
+                    src="http://i.pravatar.cc/300"
+                    alt="Avatar of Author"
+                  />
+                  <p className="text-gray-600 text-xs md:text-sm">1 MIN READ</p>
+                </div>
               </div>
             </div>
           </div>
           {/* 1/3 col */}
-          <div className="w-full lg:w-2/5 p-6 flex flex-col flex-grow flex-shrink lg:border-b">
-            <div className="mb-4 pb-2 text-xl border-b">
+          <div className="w-full lg:w-2/5 p-6 flex flex-col flex-grow flex-shrink">
+            <div className="mb-4 pb-4 text-xl border-b">
               <h5 className="font-thin text-text-xl">Top In Factchecks</h5>
             </div>
             {items.slice(1, 6).map((item, index) => (
@@ -331,7 +331,7 @@ const IndexPage = ({ data }) => {
           <div className="w-full lg:w-2/5 flex flex-col flex-grow flex-shrink order-1 lg:order-2 lg:border-l-2 border-b-2 lg:border-b-0 p-6 mt-6">
             <div ref={sidebarElement} className={`${sidebarDockedBottom}`}>
               <div className="block">
-                <div className="mb-4 pb-2 text-xl border-b">
+                <div className="mb-4 pb-4 text-xl border-b">
                   <h5 className="font-thin text-text-xl">Top In Factchecks</h5>
                 </div>
                 {items.slice(1, 6).map((item, index) => (
@@ -340,7 +340,7 @@ const IndexPage = ({ data }) => {
               </div>
 
               <div className="block">
-                <div className="mb-4 pb-2 text-xl border-b">
+                <div className="mb-4 pb-4 text-xl border-b">
                   <h5 className="font-thin text-text-xl">Top In Factchecks</h5>
                 </div>
                 {items.slice(1, 6).map((item, index) => (
@@ -349,7 +349,7 @@ const IndexPage = ({ data }) => {
               </div>
 
               <div className="block">
-                <div className="mb-4 pb-2 text-xl border-b">
+                <div className="mb-4 pb-4 text-xl border-b">
                   <h5 className="font-thin text-text-xl">Top In Factchecks</h5>
                 </div>
                 {items.slice(1, 6).map((item, index) => (

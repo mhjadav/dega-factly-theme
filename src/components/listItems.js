@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 function ListItems({ item, index, image = true }) {
   return (
-    <div className="flex p-0 mb-6 leading-tight">
+    <div className="flex p-0 pt-2 mb-6 leading-tight">
       <a
         href="/"
         className="w-full flex flex-row no-underline hover:no-underline"
@@ -23,7 +23,7 @@ function ListItems({ item, index, image = true }) {
             {item.title}
           </div>
           <p className="text-gray-800 font-sans text-sm">{item.excerpt}</p>
-          <div className="flex-none mt-auto pt-2 bg-white">
+          <div className="flex-none mt-auto py-4 bg-white">
             <div className="flex items-center justify-between">
               <div className="flex justify-center items-center">
                 <img
