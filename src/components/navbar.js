@@ -129,7 +129,7 @@ export default function Navbar({ fixed }) {
               </button>
               {stories && (
                 <div
-                  className="fixed left-0 lg:left-auto w-full lg:w-2/5 pt-6 normal-case"
+                  className="fixed left-0 lg:left-auto w-full lg:w-2/5 pt-5 normal-case"
                   style={{ height: 'calc(100vh - 75px)' }}
                 >
                   <div className="flex flex-col absolute left-auto bg-gray-100 border-t  border-gray-200 p-4 overflow-auto h-full w-full">
@@ -176,7 +176,7 @@ export default function Navbar({ fixed }) {
               </button>
               {factcheck && (
                 <div
-                  className="fixed left-0 lg:left-auto w-full lg:w-2/5 pt-6 normal-case"
+                  className="fixed left-0 lg:left-auto w-full lg:w-2/5 pt-5 normal-case"
                   style={{ height: 'calc(100vh - 75px)' }}
                 >
                   <div className="flex flex-col absolute left-auto bg-gray-100 border-t border-gray-200 p-4 overflow-auto h-full w-full">
