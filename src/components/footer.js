@@ -37,8 +37,8 @@ function Footer({ className }) {
               </a>
             </p>
           </div> */}
-          <div className="w-full px-4">
-            <div className="flex flex-wrap items-top mb-6">
+          <div className="w-full">
+            <div className="flex items-top mb-6">
               <div className="pt-6 md:pt-0 md:px-4 m-auto">
                 <span className="block uppercase text-gray-600 text-sm font-semibold mb-2">
                   Useful Links

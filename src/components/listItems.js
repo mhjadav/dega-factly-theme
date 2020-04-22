@@ -1,48 +1,46 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function ListItems({ item, index, image = true }) {
+function ListItems({ item, index, image = true, author = true, className }) {
   return (
-    <div className="flex p-0 pt-2 mb-6 leading-tight border-b border-gray-200 last:border-b-0">
+    <div
+      className={`flex flex-col py-6 leading-tight border-b border-gray-200 last:border-b-0 ${className}`}
+    >
       <a
         href="/"
-        className="w-full flex flex-row no-underline hover:no-underline"
+        className="w-full flex flex-col no-underline hover:no-underline"
       >
         {image && (
-          <div className="w-1/4 flex justify-center items-start pr-4">
+          <div className="flex w-full justify-ledt items-start pr-4">
             <img
               src={`https://source.unsplash.com/collection/${index +
-                1000}/800x200`}
+                1000}/500x200`}
               alt={item.title}
-              className="h-24 object-cover rounded"
+              className="h-40 object-cover rounded"
             />
           </div>
         )}
-        <div className={`${image ? 'w-3/4' : 'w-full'} flex flex-col p-0`}>
-          <div className="w-full font-bold font-sans text-lg text-gray-800 pb-2">
+        <div className="w-full flex flex-row">
+          <div className="w-full font-bold font-sans text-lg text-gray-800 pt-2">
             {item.title}
-          </div>
-          <p className="text-gray-800 font-sans text-lg">{item.excerpt}</p>
-          <div className="flex-none mt-auto py-4">
-            <div className="flex items-center justify-between">
-              <div className="flex justify-center items-center">
-                <img
-                  className="w-8 h-8 rounded-full mr-2 avatar"
-                  data-tippy-content="Author Name"
-                  src="http://i.pravatar.cc/300"
-                  alt="Avatar of Author"
-                />
-                <span className="text-gray-600 text-xs md:text-sm">
-                  {item.author}
-                </span>
-              </div>
-              <p className="text-gray-600 text-xs md:text-sm">
-                {item.time} Read
-              </p>
-            </div>
           </div>
         </div>
       </a>
+      {author && (
+        <div className="flex-none mt-auto py-4">
+          <div className="flex items-center justify-between">
+            <div className="flex justify-center items-center">
+              <a href="/" className="text-gray-600 text-xs md:text-sm mr-2">
+                John Doe,
+              </a>
+              <a href="/" className="text-gray-600 text-xs md:text-sm mr-2">
+                John Doe Second
+              </a>
+            </div>
+            <p className="text-gray-600 text-xs md:text-sm">Apr, 21 2020</p>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
