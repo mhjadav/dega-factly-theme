@@ -1,10 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function ListItems({ item, index, image = true, author = true, className }) {
+function ListItems({
+  item,
+  index,
+  image = true,
+  author = true,
+  className = 'py-6'
+}) {
   return (
     <div
-      className={`flex flex-col py-6 leading-tight border-b border-gray-200 last:border-b-0 ${className}`}
+      className={`flex flex-col leading-tight border-b border-gray-200 last:border-b-0 ${className}`}
     >
       <a
         href="/"

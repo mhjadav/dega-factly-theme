@@ -140,9 +140,14 @@ const IndexPage = ({ data }) => {
 
   return (
     <Layout>
-      <div className="w-full text-xl leading-tight md:text-2xl text-gray-800 leading-normal rounded-t mx-auto px-6 py-12">
+      <div className="w-full text-xl leading-tight md:text-2xl text-gray-800 leading-normal rounded-t mx-auto lg:px-6 py-12">
         <div className="flex flex-row justify-between pt-12 pb-6 lg:border-b">
-          <div className="hidden lg:flex flex-col w-full lg:w-1/4 border-r px-6 sticky top-0 h-screen overflow-auto">
+          <div
+            className="hidden lg:flex flex-col w-full lg:w-1/4 border-r px-6 sticky h-screen overflow-auto"
+            style={{
+              top: '95px'
+            }}
+          >
             <div className="block">
               {items.slice(0, 10).map((item, index) => (
                 <ListItems
@@ -150,7 +155,7 @@ const IndexPage = ({ data }) => {
                   index={index}
                   image={false}
                   author={false}
-                  className="-my-6"
+                  className="hover:opacity-50 py-2"
                 />
               ))}
             </div>
@@ -232,9 +237,9 @@ const IndexPage = ({ data }) => {
                   <div className="bg-white rounded-t rounded-b-none overflow-hidden py-6 border-b border-gray-200">
                     <a
                       href="/"
-                      className="w:full flex flex-row flex-wrap sm:flex-no-wrap no-underline hover:no-underline"
+                      className="w:full flex flex-col sm:flex-row no-underline hover:no-underline"
                     >
-                      <div className="sm:w-3/4 flex flex-col">
+                      <div className="order-2 sm:order-1 w-full sm:w-3/4 flex flex-col">
                         <p className="w-full text-gray-600 text-xs md:text-sm">
                           Factchecks
                         </p>
@@ -248,11 +253,11 @@ const IndexPage = ({ data }) => {
                           ligula.Lorem ipsum eu nunc commodo posuere et sit amet
                         </p>
                       </div>
-                      <div className="sm:w-1/4 flex justify-center">
+                      <div className="order-1 sm:order-2 w-full sm:w-1/4 flex justify-center py-4 sm:py-0 sm:px-4">
                         <img
                           src="https://source.unsplash.com/collection/345/800x600"
                           alt=""
-                          className="h-32 rounded object-cover"
+                          className="w-full h-40 rounded object-cover"
                         />
                       </div>
                     </a>
