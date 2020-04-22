@@ -15,13 +15,13 @@ export default function Navbar({ fixed }) {
       style={{ animationDelay: `${1 + 1 * 0.1}s` }}
     >
       <header className="flex item-center justify-between border-b  border-gray-100 p-2 text-md text-gray-800">
-        <nav className="flex flex-grow items-center justify-between px-4 py-3 sm:p-0 uppercase">
+        <nav className="flex flex-grow items-center justify-between px-0 lg:px-4 py-3 sm:p-0 uppercase">
           <div className="flex flex-1 order-2 lg:order-1 items-center justify-end lg:justify-start">
             <div className="order-3 lg:order-1">
               <button
                 type="button"
                 onClick={() => setNavbarOpen(!navbarOpen)}
-                className="block px-4 uppercase focus:outline-none"
+                className="block px-2 lg:px-4 uppercase focus:outline-none"
               >
                 <svg
                   className="fill-current w-4 h-4"
@@ -123,7 +123,7 @@ export default function Navbar({ fixed }) {
             >
               <button
                 type="button"
-                className="block px-4 uppercase focus:outline-none"
+                className="block px-2 lg:px-4 uppercase focus:outline-none"
               >
                 Stories
               </button>
@@ -170,7 +170,7 @@ export default function Navbar({ fixed }) {
             >
               <button
                 type="button"
-                className="block px-4 uppercase focus:outline-none"
+                className="block px-2 lg:px-4 uppercase focus:outline-none"
               >
                 Factcheck
               </button>
