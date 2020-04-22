@@ -14,7 +14,7 @@ export default function Navbar({ fixed }) {
       className="flex flex-col fixed top-0 inset-x-0 z-100 bg-white border-b border-gray-300 z-10 fadeInUp"
       style={{ animationDelay: `${1 + 1 * 0.1}s` }}
     >
-      <header className="flex item-center justify-between border-b  border-gray-100 p-4 text-md text-gray-800">
+      <header className="flex item-center justify-between border-b  border-gray-100 p-2 text-md text-gray-800">
         <nav className="flex flex-grow items-center justify-between px-4 py-3 sm:p-0 uppercase">
           <div className="flex flex-1 order-2 lg:order-1 items-center justify-end lg:justify-start">
             <div className="order-3 lg:order-1">
