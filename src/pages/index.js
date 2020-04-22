@@ -155,7 +155,7 @@ const IndexPage = ({ data }) => {
               <div className="w-full rounded-t">
                 <img
                   src={`https://source.unsplash.com/collection/${2 +
-                    1000}/800x200`}
+                    1000}/800x500`}
                   alt={2}
                   className="w-full shadow"
                 />
@@ -168,7 +168,7 @@ const IndexPage = ({ data }) => {
                 </div>
               </div>
             </a>
-            {[1, 2].map(item => (
+            {[1].map(item => (
               <div className="w:full flex flex-col no-underline hover:no-underline px-2 mb-6">
                 <a
                   href="/"
@@ -292,7 +292,7 @@ const IndexPage = ({ data }) => {
               {postItems.map(item => (
                 <a
                   href="/"
-                  className="w:full flex flex-row flex-wrap sm:flex-no-wrap no-underline hover:no-underline px-2 mb-4"
+                  className="w:full flex flex-row flex-wrap sm:flex-no-wrap no-underline hover:no-underline px-2 mb-4  border-b border-gray-200"
                 >
                   <div className="sm:w-1/4 flex justify-center">
                     <img
@@ -315,7 +315,7 @@ const IndexPage = ({ data }) => {
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     </p>
-                    <div className="flex-none mt-auto py-4 bg-white">
+                    <div className="flex-none mt-auto py-4">
                       <div className="flex items-center justify-between">
                         <div className="flex justify-center items-center">
                           <img

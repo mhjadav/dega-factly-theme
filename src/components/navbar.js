@@ -39,7 +39,7 @@ export default function Navbar({ fixed }) {
             </div>
           </div>
 
-          <div className="">
+          {/* <div className="">
             <form className="w-full max-auto">
               <div className="flex items-center border-b border-b-2 border-gray-500 py-2">
                 <input
@@ -56,7 +56,7 @@ export default function Navbar({ fixed }) {
                 </button>
               </div>
             </form>
-          </div>
+          </div> */}
 
           <div
             className={`flex ${
