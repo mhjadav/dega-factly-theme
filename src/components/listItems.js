@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 function ListItems({ item, index, image = true }) {
   return (
-    <div className="flex p-0 pt-2 mb-6 leading-tight border-b border-gray-200">
+    <div className="flex p-0 pt-2 mb-6 leading-tight border-b border-gray-200 last:border-b-0">
       <a
         href="/"
         className="w-full flex flex-row no-underline hover:no-underline"
