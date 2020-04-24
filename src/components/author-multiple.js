@@ -5,7 +5,7 @@ function AuthorMultiple() {
   const author = [1, 2];
   return (
     <div className="flex flex-col justify-start items-start py-2">
-      <div className="flex flex-row">
+      <div className="flex flex-row flex-wrap">
         {author.map(() => (
           <img
             className="w-16 h-16 rounded-full mr-2 avatar"
@@ -16,7 +16,7 @@ function AuthorMultiple() {
         ))}
       </div>
       <div className="flex flex-col py-2">
-        <div className="flex flex-row">
+        <div className="flex flex-row flex-wrap">
           {author.map((i, index, arr) => (
             <a href="/" className="font-medium text-blue-500 text-lg  px-1">
               John Doe{arr.length - index > 1 && ','}

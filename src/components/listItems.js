@@ -31,10 +31,12 @@ function ListItems({
         )}
         <div className="w-full flex flex-col">
           {tags && (
-            <p className="w-full text-gray-600 text-xs md:text-sm">Stories</p>
+            <p className="w-full text-gray-600 text-xs md:text-sm pb-2">
+              Stories
+            </p>
           )}
           <div
-            className={`w-full font-bold font-sans text-lg text-gray-800 pt-2 ${index ===
+            className={`w-full font-bold font-sans text-lg text-gray-800  ${index ===
               2 && 'active'}`}
           >
             {item.title}

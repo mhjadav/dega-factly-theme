@@ -95,23 +95,21 @@ const PostDetails = ({ data }) => {
         <div className="sidebar lg:flex lg:w-1/4 border-r border-l sticky">
           <div className="block">
             <div className="mb-4 pb-4 border-b px-6">
-              <h5 className="font-thin text-xl leading-tight">
-                Selected stories for you
-              </h5>
+              <h5 className="font-thin text-xl leading-tight">Related Posts</h5>
             </div>
             {items.slice(0, 10).map((item, index) => (
               <ListItems
                 item={item}
                 index={index}
-                image={false}
                 author={false}
+                imageSize="w-1/4 h-10"
                 className="py-2 px-6 border-gray-200"
               />
             ))}
             <Footer className="mt-6" />
           </div>
         </div>
-        <div className="flex flex-col w-full lg:w-3/4 p-6">
+        <div className="flex flex-col w-full lg:w-3/4 p-2 lg:p-6">
           <InfiniteScroll
             pageStart={0}
             loadMore={handleLoadMore}

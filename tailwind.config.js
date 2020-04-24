@@ -9,7 +9,7 @@ module.exports = {
     }
   },
   variants: {
-    borderWidth: ['responsive', 'last', 'hover', 'focus']
+    borderWidth: ['responsive', 'last', 'hover', 'focus', 'first']
   },
   plugins: []
 };

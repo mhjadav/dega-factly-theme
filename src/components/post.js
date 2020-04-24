@@ -14,11 +14,11 @@ function Post() {
           Between 2016 & 2018, more than ₹ 100 crore paid in Compensation for
           complaints against Airlines
         </h1>
-        <div className="flex">
+        <div className="flex flex-col md:flex-row">
           <AuthorMultiple />
-          <div className="flex flex-1 items-center justify-end">
+          <div className="flex flex-1 items-center justify-start md:justify-end">
             <a
-              className="block px-2 py-1 font-semibold rounded hover:bg-gray-800"
+              className="block px-2 fisrt:px-0 py-1 font-semibold rounded hover:bg-gray-800"
               href="/"
             >
               <svg
@@ -72,11 +72,15 @@ function Post() {
           </div>
         </div>
       </div>
-      <div className="flex p-4 my-6 bg-gray-200">
+      <div className="flex flex-col md:flex-row flex-wrap my-6 bg-gray-200">
         <div className="flex-1">
-          <img src={img} alt="" className="w-full h-64 rounded object-cover" />
+          <img
+            src={img}
+            alt=""
+            className="w-full h-64 rounded-t rounded-l-none md:rounded-t-none md:rounded-l object-cover"
+          />
         </div>
-        <div className="flex flex-col flex-1 px-4">
+        <div className="flex flex-col flex-1 p-4">
           <div className="w-full font-bold text-2xl leading-tight text-gray-900">
             Excerpt
           </div>
@@ -89,6 +93,22 @@ function Post() {
           </p>
         </div>
       </div>
+      <div className="flex flex-col md:flex-row">
+        {[1, 2, 3, 4].map(item => (
+          <a
+            href="/"
+            className={`border border-gray-200 rounded text-white text-left text-lg p-2 mx-2 
+            ${item === 1 && 'bg-red-600'}
+            ${item === 2 && 'bg-gray-600'}
+            ${item === 3 ? 'bg-green-600' : 'bg-gray-600'}
+            `}
+          >
+            Indian Railways is not deducting around 20 rupees on every cancelled
+            ticket.
+          </a>
+        ))}
+      </div>
+
       <div
         className="my-6 pb-12 border-b text-gray-800 font-sans text-xl"
         dangerouslySetInnerHTML={{ __html: postContent }}
