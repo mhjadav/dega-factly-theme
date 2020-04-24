@@ -35,6 +35,24 @@ body::-webkit-scrollbar-thumb {
     outline: 1px solid #e83745;
 }
 
+.sidebar {
+    height: 100vh;
+    top: 0;
+    @apply hidden flex-col w-full pt-6 sticky overflow-auto;
+}
+
+.active {
+    @apply text-blue-500
+}
+
+.main-content {
+    @apply flex flex-col w-full pt-6;
+}
+
+a:hover{
+    @apply opacity-75
+}
+
 .fadeInUp {
     animation-name: fadeInUp;
     animation-duration: 0.45s;

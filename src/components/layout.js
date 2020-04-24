@@ -58,7 +58,9 @@ const Layout = props => (
             ></body>
           </Helmet>
           <Navbar></Navbar>
-          {children}
+          <div className="w-full text-xl leading-tight md:text-2xl text-gray-800 leading-normal rounded-t mx-auto lg:px-6 pt-16">
+            {children}
+          </div>
           {/* <Footer></Footer> */}
         </>
       );

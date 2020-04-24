@@ -3,8 +3,16 @@ import React from 'react';
 import logo from '../static/images/logo/logo.png';
 import Menu from './menu';
 import Account from './AccountDropdown';
+import ListItems from './listItems';
 
-const menuItems = [1, 2, 3, 4, 5, 6];
+const menuItems = Array(20).fill({
+  title:
+    'Lorem ipsum dolor sit ament, Lorem ipsum dolor sit ament,Lorem ipsum dolor sit ament',
+  excerpt:
+    'Lorem ipsum dolor sit ament, Lorem ipsum dolor sit ament, Lorem ipsum dolor sit ament',
+  author: 'John Doe',
+  time: '2 Min'
+});
 export default function Navbar({ fixed }) {
   const [navbarOpen, setNavbarOpen] = React.useState(false);
   const [factcheck, setFactcheck] = React.useState(false);
@@ -133,30 +141,14 @@ export default function Navbar({ fixed }) {
                   style={{ height: 'calc(100vh - 75px)' }}
                 >
                   <div className="flex flex-col absolute left-auto bg-gray-100 border-t  border-gray-200 p-4 overflow-auto h-full w-full">
-                    {[1, 2, 3, 4, 5, 6, 7, 8, 9].map(() => (
-                      <div className="flex flex-col py-4 px-2 leading-tight border-b border-gray-100 last:border-b-0 hover:opacity-50">
-                        <a
-                          href="/"
-                          className="w:full flex flex-row no-underline hover:no-underline"
-                        >
-                          <div className="flex lg:w-1/4 justify-center">
-                            <img
-                              src="https://source.unsplash.com/collection/345/800x600"
-                              alt=""
-                              className="h-20 rounded object-cover"
-                            />
-                          </div>
-                          <div className="flex flex-col w-3/4 px-4 text-left">
-                            <p className="w-full text-gray-600 text-xs md:text-sm">
-                              Stories
-                            </p>
-                            <div className="w-full font-bold text-xl leading-tight text-gray-900">
-                              ligula.Lorem ipsum eu nunc commodo posuere et sit
-                              sit amet
-                            </div>
-                          </div>
-                        </a>
-                      </div>
+                    {menuItems.map((item, index) => (
+                      <ListItems
+                        item={item}
+                        index={index}
+                        author={false}
+                        tags
+                        image={false}
+                      />
                     ))}
                   </div>
                 </div>
@@ -179,36 +171,16 @@ export default function Navbar({ fixed }) {
                   className="fixed left-0 lg:left-auto w-full lg:w-2/5 pt-5 normal-case"
                   style={{ height: 'calc(100vh - 75px)' }}
                 >
-                  <div className="flex flex-col absolute left-auto bg-gray-100 border-t border-gray-200 p-4 overflow-auto h-full w-full">
-                    {[1, 2, 3, 4, 5, 6, 7, 8, 9].map(() => (
-                      <div className="flex flex-col py-4 px-2 leading-tight border-b border-gray-100 last:border-b-0 hover:opacity-50">
-                        <a
-                          href="/"
-                          className="w:full flex flex-row no-underline hover:no-underline"
-                        >
-                          <div className="flex lg:w-1/4 justify-center">
-                            <img
-                              src="https://source.unsplash.com/collection/345/800x600"
-                              alt=""
-                              className="h-20 rounded object-cover"
-                            />
-                          </div>
-                          <div className="flex flex-col w-3/4 px-4 text-left">
-                            <p className="w-full text-gray-600 text-xs md:text-sm">
-                              Stories
-                            </p>
-                            <div className="w-full font-bold text-xl leading-tight text-gray-900">
-                              Lorem ipsum dolor sit amet.Lorem ipsum dolor sit
-                              amet.
-                            </div>
-                            <p className="text-gray-800 font-sans text-lg pt-2">
-                              ligula.Lorem ipsum eu nunc commodo posuere et sit
-                              amet ligula.Lorem ipsum eu nunc commodo posuere et
-                              sit amet
-                            </p>
-                          </div>
-                        </a>
-                      </div>
+                  <div className="flex flex-col absolute left-auto bg-gray-100 border-t border-gray-200 py-4 overflow-auto h-full w-full">
+                    {menuItems.map((item, index) => (
+                      <ListItems
+                        item={item}
+                        index={index}
+                        author={false}
+                        tags
+                        excerpt
+                        imageSize="w-1/4 h-20"
+                      />
                     ))}
                   </div>
                 </div>
