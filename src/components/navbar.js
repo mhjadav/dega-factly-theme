@@ -19,7 +19,7 @@ export default function Navbar({ fixed }) {
   const [stories, setStories] = React.useState(false);
   return (
     <div
-      className="flex flex-col fixed top-0 inset-x-0 z-100 bg-white border-b border-gray-300 z-10 fadeInUp"
+      className="fixed top-0 inset-x-0 bg-white border-b border-gray-300 z-10 fadeInUp"
       style={{ animationDelay: `${1 + 1 * 0.1}s` }}
     >
       <header className="flex item-center justify-between border-b  border-gray-100 p-2 text-md text-gray-800">
