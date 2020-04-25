@@ -5,21 +5,21 @@ import PropTypes from 'prop-types';
 
 import Layout from '../components/layout';
 
-const IndexPage = ({ data }) => (
+const PageNotFound = ({ data }) => (
   <Layout>
     <h1>Page Not Found</h1>
     <Img fixed={data.file.childImageSharp.fixed} />
   </Layout>
 );
 
-IndexPage.propTypes = {
+PageNotFound.propTypes = {
   data: PropTypes.shape({
     file: {
       childImageSharp: {}
     }
   })
 };
-export default IndexPage;
+export default PageNotFound;
 export const query = graphql`
   query {
     file(relativePath: { eq: "logo/logo.png" }) {
