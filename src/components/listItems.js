@@ -6,6 +6,7 @@ import img from '../static/images/i.jpg';
 
 function ListItems({
   item,
+  postActiveIndex = 0,
   index,
   image = true,
   author = true,
@@ -36,8 +37,9 @@ function ListItems({
             </p>
           )}
           <div
-            className={`w-full font-bold font-sans text-lg text-gray-800  ${index ===
-              2 && 'active'}`}
+            id={`nav-${index}`}
+            className={`w-full font-bold font-sans text-lg text-gray-800 ${postActiveIndex ==
+              index && 'active'}`}
           >
             {item.title}
           </div>
