@@ -54,7 +54,7 @@ const Layout = props => (
             <html lang={siteMetadata.lang} />
             <body
               className="bg-white text-gray-900 leading-normal mx-auto w-full tracking-wider"
-              style="max-width:2000px"
+              style={{ maxWidth: '2000px' }}
             ></body>
           </Helmet>
           <Navbar></Navbar>
