@@ -31,7 +31,7 @@ function ListItems({
         )}
         <div className="w-full flex flex-col">
           {tags && (
-            <p className="w-full text-gray-600 text-xs md:text-sm pb-2">
+            <p className="w-full text-gray-600 text-xs md:text-sm pb-1">
               Stories
             </p>
           )}
