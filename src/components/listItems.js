@@ -22,12 +22,11 @@ function ListItems({
     >
       <Link
         to="post-details"
-        className={`w-full flex ${orientation === 'vertical' &&
-          'flex-col'} no-underline hover:no-underline`}
+        className={`w-full flex ${orientation} no-underline hover:no-underline`}
       >
         {image && (
           <div className={`flex ${imageSize} justify-start items-start pr-4`}>
-            <img src={img} className="h-full object-cover rounded" />
+            <img src={img} className="w-full object-cover rounded" />
           </div>
         )}
         <div className="w-full flex flex-col">
@@ -54,12 +53,14 @@ function ListItems({
         <div className="flex mt-auto py-4">
           {orientation !== 'vertical' && (
             <div
-              className={`flex ${imageSize} justify-start items-start pr-4`}
+              className={`hidden md:flex ${imageSize} justify-start items-start pr-4`}
               style={{ height: '0' }}
             ></div>
           )}
-          <div className="flex w-full items-center justify-between">
-            <div className="flex justify-center items-center">
+          <div
+            className={`flex flex-col w-full ${orientation} justify-between items-start`}
+          >
+            <div className="flex flex-row flex-wrap">
               <a href="/" className="text-gray-600 text-xs md:text-sm mr-2">
                 John Doe,
               </a>

@@ -41,6 +41,16 @@ body::-webkit-scrollbar-thumb {
     @apply hidden flex-col w-full pt-6 sticky overflow-auto;
 }
 
+.vertical{
+    @apply flex-col;
+}
+
+@screen md {
+    .horizontal {
+        @apply flex-row;
+    }
+}
+
 .active {
     @apply text-blue-500
 }

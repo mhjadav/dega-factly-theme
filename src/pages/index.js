@@ -169,11 +169,12 @@ const IndexPage = ({ data }) => {
             >
               {postItems.map((item, index) => (
                 <ListItems
+                  orientation="vertical horizontal"
                   item={item}
                   index={index}
                   tags
                   excerpt
-                  imageSize="w-1/4 h-40"
+                  imageSize="w-full md:w-1/3 h-auto md:h-40 py-4 md:py-0"
                 />
               ))}
             </InfiniteScroll>
@@ -187,7 +188,7 @@ const IndexPage = ({ data }) => {
               </h5>
             </div>
             {items.slice(0, 10).map((item, index) => (
-              <ListItems item={item} index={index} orientation="vertical" />
+              <ListItems orientation="vertical" item={item} index={index} />
             ))}
             <Footer></Footer>
           </div>
