@@ -9,6 +9,7 @@
 }
 div::-webkit-scrollbar {
     width: 4px;
+    height: 4px;
 }
 div::-webkit-scrollbar-track {
     box-shadow: inset 0 0 6px white;
@@ -38,7 +39,11 @@ body::-webkit-scrollbar-thumb {
 .sidebar {
     height: 100vh;
     top: 0;
-    @apply hidden flex-col w-full pt-16 sticky overflow-auto;
+    @apply hidden flex-col w-full pt-16 sticky overflow-y-hidden;
+}
+
+.sidebar:hover {
+    overflow-y: overlay;
 }
 
 .vertical{

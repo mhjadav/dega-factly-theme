@@ -37,13 +37,13 @@ function ListItems({
           )}
           <div
             id={`nav-${index}`}
-            className={`w-full font-bold font-sans text-lg text-gray-800 ${postActiveIndex ==
+            className={`w-full font-bold font-sans text-sm text-gray-800 ${postActiveIndex ==
               index && 'active'}`}
           >
             {item.title}
           </div>
           {excerpt && (
-            <p className="text-gray-800 font-sans text-lg pt-2">
+            <p className="text-gray-800 font-sans text-sm pt-2">
               {item.excerpt}
             </p>
           )}

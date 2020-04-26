@@ -174,7 +174,7 @@ const IndexPage = ({ data }) => {
                   index={index}
                   tags
                   excerpt
-                  imageSize="w-full md:w-1/3 h-auto md:h-40 py-4 md:py-0"
+                  imageSize="w-full md:w-1/3 h-auto md:h-24 py-4 md:py-0"
                 />
               ))}
             </InfiniteScroll>
