@@ -44,7 +44,7 @@ function Post({ observer, index }) {
       className="flex flex-col p-6 mb-12"
     >
       <div className="bg-white rounded-t rounded-b-none overflow-hidden">
-        <h1 className="font-medium text-2xl py-2">
+        <h1 className="font-medium text-3xl py-2">
           Between 2016 & 2018, more than ₹ 100 crore paid in Compensation for
           complaints against Airlines
         </h1>
@@ -139,17 +139,17 @@ function Post({ observer, index }) {
             type="button"
             onClick={handlePrevClick}
             href-id="claim-1"
-            className="border border-gray-200 bg-gray-400 rounded uppercase text-left text-lg p-2"
+            className="border border-gray-200 rounded text-left text-lg p-2 focus:outline-none"
           >
-            {'<'}
+            Previous
           </button>
           <button
             type="button"
             onClick={handleNextClick}
             href-id="claim-1"
-            className="border border-gray-200 bg-gray-400 rounded uppercase text-left text-lg p-2"
+            className="border border-gray-200 rounded text-left text-lg p-2 focus:outline-none"
           >
-            {'>'}
+            Next
           </button>
         </div>
         <div
@@ -164,7 +164,7 @@ function Post({ observer, index }) {
               <div className="w-full flex flex-col  border rounded shadow-lg">
                 <div className="flex justify-center items-center">
                   <div className="flex p-4">
-                    <h2 className="font-bold P-2">Claiment {i}:</h2>
+                    <h2 className="font-bold P-2">Claiment:</h2>
                     <a
                       className="block px-2 py-1 font-semibold rounded hover:bg-gray-800"
                       href="/"
@@ -223,20 +223,33 @@ function Post({ observer, index }) {
                 </div>
                 <div
                   className={`flex flex-col p-4 ${
-                    i === 1
+                    i % 2 === 1
                       ? 'text-white bg-red-600'
                       : 'text-white bg-green-600'
                   }`}
                 >
+                  <h2 className="font-bold P-4">Claim</h2>
                   <div className="flex">
-                    <h2 className="font-bold P-4">Claim</h2>
+                    <p>
+                      A message is being shared widely on social media with a
+                      claim that Indian Railways has cancelled around 39 lakh
+                      tickets and are deducting around 20 rupees on every
+                      ticket. Let’s try to analyze the claim made in the post.
+                    </p>
+                    {i % 2 === 1 ? (
+                      <img
+                        alt=""
+                        src="https://images.degacms.com/dega-content/factly/2019/9/1568231061576-false.png"
+                        className="w-1/6 h-full rounded-t m-2"
+                      />
+                    ) : (
+                      <img
+                        alt=""
+                        src="https://images.degacms.com/dega-content/factly/2019/9/1568222996045-true.png"
+                        className="w-1/6 h-full rounded-t m-2"
+                      />
+                    )}
                   </div>
-                  <p>
-                    A message is being shared widely on social media with a
-                    claim that Indian Railways has cancelled around 39 lakh
-                    tickets and are deducting around 20 rupees on every ticket.
-                    Let’s try to analyze the claim made in the post.
-                  </p>
                 </div>
                 <div className="flex flex-col p-4 border-b">
                   <h2 className="font-bold">Fact</h2>
@@ -247,23 +260,6 @@ function Post({ observer, index }) {
                     Let’s try to analyze the claim made in the post.
                   </p>
                 </div>
-                {i === 1 ? (
-                  <a
-                    href="/"
-                    className="flex items-center font-medium text-lg p-2 text-red-600"
-                  >
-                    <False className="mx-2 fill-current stroke-current w-10 h-10 text-center" />{' '}
-                    This is a misleading post
-                  </a>
-                ) : (
-                  <a
-                    href="/"
-                    className="flex items-center font-medium text-lg p-2 text-green-600"
-                  >
-                    <True className="mx-2 fill-current stroke-current w-10 h-10 text-center" />{' '}
-                    This is a valid post
-                  </a>
-                )}
               </div>
             </div>
           ))}
