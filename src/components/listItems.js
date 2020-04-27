@@ -37,7 +37,7 @@ function ListItems({
           )}
           <div
             id={`nav-${index}`}
-            className={`w-full font-bold font-sans text-sm text-gray-800 ${postActiveIndex ==
+            className={`w-full font-bold font-sans text-base text-gray-800 ${postActiveIndex ===
               index && 'active'}`}
           >
             {item.title}
