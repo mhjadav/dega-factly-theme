@@ -8,74 +8,36 @@ import ListItems from '../components/listItems';
 import Footer from '../components/footer';
 import img from '../static/images/i.jpg';
 
-const items = [
+const items = Array(20).fill({
+  title:
+    'A video clip from a web series is being falsely shared as ‘Sadhu strangling a policeman brutally’',
+  excerpt:
+    'After POTUS Donald Trump announced that USA is halting its funding to the WHO, there has been a lot of debate around WHO’s finances. So, who funds the WHO? What is the size of its budget? Here is a detailed explainer.',
+  author: ['Pavithra K M', 'Bharath Kancharla'],
+  time: '2 Min',
+  image: ''
+});
+
+const topCategory = [
   {
-    title:
-      'Lorem ipsum dolor sit ament, Lorem ipsum dolor sit ament,Lorem ipsum dolor sit ament',
-    excerpt:
-      'Lorem ipsum dolor sit ament Lorem ipsum dolor sit ament Lorem ipsum dolor sit ament Lorem ipsum dolor sit ament, Lorem ipsum dolor sit ament, Lorem ipsum dolor sit ament',
-    author: 'John Doe',
-    time: '2 Min',
-    image: ''
+    title: 'Goverment of India'
   },
   {
-    title: 'Lorem ipsum dolor sit ament, Lorem ipsum dolor sit ament',
-    excerpt:
-      'Lorem ipsum dolor sit ament Lorem ipsum dolor sit amentLorem ipsum dolor sit ament, Lorem ipsum dolor sit ament, Lorem ipsum Lorem ipsum dolor sit ament, Lorem ipsum dolor sit ament, Lorem ipsum',
-    author: 'John Doe',
-    time: '2 Min',
-    image: ''
+    title: 'Coronavirus'
   },
   {
-    title: 'Lorem ipsum dolor sit ament, Lorem ipsum dolor sit ament',
-    excerpt:
-      'Lorem ipsum dolor sit ament, Lorem ipsum dolor sit ament  Lorem ipsum dolor sit ament Lorem ipsum dolor sit amentLorem ipsum dolor sit ament, Lorem ipsum',
-    author: 'John Doe',
-    time: '2 Min',
-    image: ''
+    title: 'Business In India'
   },
   {
-    title: 'Lorem ipsum dolor sit ament',
-    excerpt:
-      'Lorem ipsum dolor sit ament, Lorem ipsum dolor sit ament Lorem ipsum dolor sit ament Lorem ipsum dolor sit ament Lorem ipsum dolor sit amentLorem ipsum dolor sit ament, Lorem ipsum',
-    author: 'John Doe',
-    time: '2 Min',
-    image: ''
+    title: 'Goverment of India'
   },
   {
-    title: 'Lorem ipsum dolor sit ament',
-    excerpt:
-      'Lorem ipsum dolor sit ament, Lorem ipsum dolor sit ament Lorem ipsum dolor sit ament Lorem ipsum dolor sit ament Lorem ipsum dolor sit ament, Lorem ipsum',
-    author: 'John Doe',
-    time: '2 Min',
-    image: ''
+    title: 'Coronavirus'
   },
   {
-    title: 'Lorem ipsum dolor sit ament',
-    excerpt:
-      'Lorem ipsum dolor sit ament, Lorem ipsum dolor sit ament, Lorem ipsum',
-    author: 'John Doe',
-    time: '2 Min',
-    image: ''
-  },
-  {
-    title: 'Lorem ipsum dolor sit ament, Lorem ipsum dolor sit ament',
-    excerpt:
-      'Lorem ipsum dolor sit ament, Lorem ipsum dolor sit ament, Lorem ipsum',
-    author: 'John Doe',
-    time: '2 Min',
-    image: ''
-  },
-  {
-    title: 'Lorem ipsum dolor sit ament',
-    excerpt:
-      'Lorem ipsum dolor sit ament, Lorem ipsum dolor sit ament, Lorem ipsum Lorem ipsum dolor sit ament',
-    author: 'John Doe',
-    time: '2 Min',
-    image: ''
+    title: 'Business In India'
   }
 ];
-
 const IndexPage = ({ data }) => {
   const [postItems, setPostItems] = useState(items.slice(0, 2));
   const [hasNextPage, setHasNextPage] = useState(true);
@@ -92,7 +54,17 @@ const IndexPage = ({ data }) => {
       <div className="flex flex-row justify-between lg:border-b">
         <div className="sidebar lg:flex lg:w-1/4 border-r border-l sticky">
           <div className="block">
-            {items.slice(0, 10).map((item, index) => (
+            <div className="flex w-full justify-start items-start p-4">
+              <img
+                alt=""
+                src="https://factly.in/wp-content/uploads//2018/09/banner-survey-side.png"
+                className="w-full object-cover rounded"
+              />
+            </div>
+            <div className="mb-4 border-b py-4 px-6">
+              <h5 className="heading">Headlines</h5>
+            </div>
+            {topCategory.map((item, index) => (
               <ListItems
                 item={item}
                 index={index}
@@ -118,10 +90,10 @@ const IndexPage = ({ data }) => {
               <p className="w-full text-gray-600 text-xs md:text-sm pt-2">
                 Factchecks
               </p>
-              <div className="w-full font-bold text-xl leading-tight text-gray-900">
+              <div className="w-full font-bold text-xl leading-tight text-gray-900 break-all">
                 Lorem ipsum dolor sit amet.
               </div>
-              <p className="text-gray-800 font-sans text-lg pt-2">
+              <p className="text-gray-800 font-sans text-lg pt-2 break-all">
                 Lorem ipsum eu nunc commodo posuere et sit amet ligula.Lorem
                 ipsum eu nunc commodo posuere et sit amet ligula.Lorem ipsum eu
                 nunc commodo posuere et sit amet ligula.Lorem ipsum eu nunc
@@ -181,7 +153,12 @@ const IndexPage = ({ data }) => {
               <h5 className="heading">Top In Factchecks</h5>
             </div>
             {items.slice(0, 10).map((item, index) => (
-              <ListItems orientation="vertical" item={item} index={index} />
+              <ListItems
+                orientation="vertical"
+                tags
+                item={item}
+                index={index}
+              />
             ))}
             <Footer></Footer>
           </div>

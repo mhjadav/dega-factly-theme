@@ -8,83 +8,21 @@ import ListItems from '../components/listItems';
 import Footer from '../components/footer';
 import Post from '../components/post';
 
-const items = [
-  {
-    title:
-      'Lorem ipsum dolor sit ament, Lorem ipsum dolor sit ament,Lorem ipsum dolor sit ament',
-    excerpt:
-      'Lorem ipsum dolor sit ament, Lorem ipsum dolor sit ament, Lorem ipsum dolor sit ament',
-    description:
-      'Lorem ipsum dolor sit ament, Lorem ipsum dolor sit ament, Lorem ipsum dolor sit ament Lorem ipsum dolor sit ament, Lorem ipsum dolor sit ament, Lorem ipsum dolor sit ament Lorem ipsum dolor sit ament, Lorem ipsum dolor sit ament, Lorem ipsum dolor sit ament Lorem ipsum dolor sit ament, Lorem ipsum dolor sit ament, Lorem ipsum dolor sit ament Lorem ipsum dolor sit ament, Lorem ipsum dolor sit ament, Lorem ipsum dolor sit ament Lorem ipsum dolor sit ament, Lorem ipsum dolor sit ament, Lorem ipsum dolor sit ament Lorem ipsum dolor sit ament, Lorem ipsum dolor sit ament, Lorem ipsum dolor sit ament Lorem ipsum dolor sit ament, Lorem ipsum dolor sit ament, Lorem ipsum dolor sit ament Lorem ipsum dolor sit ament, Lorem ipsum dolor sit ament, Lorem ipsum dolor sit ament Lorem ipsum dolor sit ament, Lorem ipsum dolor sit ament, Lorem ipsum dolor sit ament',
-    author: 'John Doe',
-    time: '2 Min',
-    image: ''
-  },
-  {
-    title: 'Lorem ipsum dolor sit ament, Lorem ipsum dolor sit ament',
-    excerpt:
-      'Lorem ipsum dolor sit ament, Lorem ipsum dolor sit ament, Lorem ipsum Lorem ipsum dolor sit ament, Lorem ipsum dolor sit ament, Lorem ipsum',
-    author: 'John Doe',
-    time: '2 Min',
-    image: ''
-  },
-  {
-    title: 'Lorem ipsum dolor sit ament, Lorem ipsum dolor sit ament',
-    excerpt:
-      'Lorem ipsum dolor sit ament, Lorem ipsum dolor sit ament, Lorem ipsum',
-    author: 'John Doe',
-    time: '2 Min',
-    image: ''
-  },
-  {
-    title: 'Lorem ipsum dolor sit ament',
-    excerpt:
-      'Lorem ipsum dolor sit ament, Lorem ipsum dolor sit ament, Lorem ipsum',
-    author: 'John Doe',
-    time: '2 Min',
-    image: ''
-  },
-  {
-    title: 'Lorem ipsum dolor sit ament',
-    excerpt:
-      'Lorem ipsum dolor sit ament, Lorem ipsum dolor sit ament, Lorem ipsum',
-    author: 'John Doe',
-    time: '2 Min',
-    image: ''
-  },
-  {
-    title: 'Lorem ipsum dolor sit ament',
-    excerpt:
-      'Lorem ipsum dolor sit ament, Lorem ipsum dolor sit ament, Lorem ipsum',
-    author: 'John Doe',
-    time: '2 Min',
-    image: ''
-  },
-  {
-    title: 'Lorem ipsum dolor sit ament, Lorem ipsum dolor sit ament',
-    excerpt:
-      'Lorem ipsum dolor sit ament, Lorem ipsum dolor sit ament, Lorem ipsum',
-    author: 'John Doe',
-    time: '2 Min',
-    image: ''
-  },
-  {
-    title: 'Lorem ipsum dolor sit ament',
-    excerpt:
-      'Lorem ipsum dolor sit ament, Lorem ipsum dolor sit ament, Lorem ipsum Lorem ipsum dolor sit ament',
-    author: 'John Doe',
-    time: '2 Min',
-    image: ''
-  }
-];
+const items = Array(20).fill({
+  title:
+    'A video clip from a web series is being falsely shared as ‘Sadhu strangling a policeman brutally’',
+  excerpt:
+    'After POTUS Donald Trump announced that USA is halting its funding to the WHO, there has been a lot of debate around WHO’s finances. So, who funds the WHO? What is the size of its budget? Here is a detailed explainer.',
+  author: ['Pavithra K M', 'Bharath Kancharla'],
+  time: '2 Min',
+  image: ''
+});
 const posts = Array(1000).fill({
   title:
-    'Lorem ipsum dolor sit ament, Lorem ipsum dolor sit ament,Lorem ipsum dolor sit ament',
+    'A video clip from a web series is being falsely shared as ‘Sadhu strangling a policeman brutally’',
   excerpt:
-    'Lorem ipsum dolor sit ament, Lorem ipsum dolor sit ament, Lorem ipsum dolor sit ament',
-  description:
-    'Lorem ipsum dolor sit ament, Lorem ipsum dolor sit ament, Lorem ipsum dolor sit ament Lorem ipsum dolor sit ament, Lorem ipsum dolor sit ament, Lorem ipsum dolor sit ament Lorem ipsum dolor sit ament, Lorem ipsum dolor sit ament, Lorem ipsum dolor sit ament Lorem ipsum dolor sit ament, Lorem ipsum dolor sit ament, Lorem ipsum dolor sit ament Lorem ipsum dolor sit ament, Lorem ipsum dolor sit ament, Lorem ipsum dolor sit ament Lorem ipsum dolor sit ament, Lorem ipsum dolor sit ament, Lorem ipsum dolor sit ament Lorem ipsum dolor sit ament, Lorem ipsum dolor sit ament, Lorem ipsum dolor sit ament Lorem ipsum dolor sit ament, Lorem ipsum dolor sit ament, Lorem ipsum dolor sit ament Lorem ipsum dolor sit ament, Lorem ipsum dolor sit ament, Lorem ipsum dolor sit ament Lorem ipsum dolor sit ament, Lorem ipsum dolor sit ament, Lorem ipsum dolor sit ament',
-  author: 'John Doe',
+    'After POTUS Donald Trump announced that USA is halting its funding to the WHO, there has been a lot of debate around WHO’s finances. So, who funds the WHO? What is the size of its budget? Here is a detailed explainer.',
+  author: ['Pavithra K M', 'Bharath Kancharla'],
   time: '2 Min',
   image: ''
 });

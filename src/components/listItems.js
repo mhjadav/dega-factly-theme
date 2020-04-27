@@ -14,7 +14,7 @@ function ListItems({
   excerpt = false,
   orientation = 'horizontal',
   className = 'p-6 border-gray-200',
-  imageSize = 'w-full h-40'
+  imageSize = 'w-full'
 }) {
   return (
     <div
@@ -25,7 +25,9 @@ function ListItems({
         className={`w-full flex ${orientation} no-underline hover:no-underline`}
       >
         {image && (
-          <div className={`flex ${imageSize} justify-start items-start pr-4`}>
+          <div
+            className={`flex ${imageSize} justify-start items-start pr-4 py-2`}
+          >
             <img src={img} className="w-full object-cover rounded" />
           </div>
         )}
@@ -37,7 +39,7 @@ function ListItems({
           )}
           <div
             id={`nav-${index}`}
-            className={`w-full font-bold font-sans text-base text-gray-800 ${postActiveIndex ===
+            className={`w-full break-all font-bold font-sans text-base text-gray-800 ${postActiveIndex ===
               index && 'active'}`}
           >
             {item.title}
@@ -50,7 +52,7 @@ function ListItems({
         </div>
       </Link>
       {author && (
-        <div className="flex mt-auto py-4">
+        <div className="flex mt-auto py-2">
           {orientation !== 'vertical' && (
             <div
               className={`hidden md:flex ${imageSize} justify-start items-start pr-4`}
@@ -61,12 +63,15 @@ function ListItems({
             className={`flex flex-col w-full ${orientation} justify-between items-start`}
           >
             <div className="flex flex-row flex-wrap">
-              <a href="/" className="text-gray-600 text-xs md:text-sm mr-2">
-                John Doe,
-              </a>
-              <a href="/" className="text-gray-600 text-xs md:text-sm mr-2">
-                John Doe Second
-              </a>
+              {item.author.map((value, index, arr) => (
+                <a
+                  href="/"
+                  className="text-gray-600 text-xs md:text-sm mr-2 normal-case"
+                >
+                  {value}
+                  {arr.length - index > 1 && ','}
+                </a>
+              ))}
             </div>
             <p className="text-gray-600 text-xs md:text-sm">Apr, 21 2020</p>
           </div>
