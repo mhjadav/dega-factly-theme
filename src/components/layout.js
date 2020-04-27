@@ -52,10 +52,7 @@ const Layout = props => (
             link={[{ rel: 'canonical', href: siteMetadata.siteUrl }]}
           >
             <html lang={siteMetadata.lang} />
-            <body
-              className="bg-white text-gray-900 leading-normal mx-auto w-full tracking-wider"
-              style={{ maxWidth: '2000px' }}
-            ></body>
+            <body className="bg-white text-gray-900 leading-normal mx-auto w-full max-w-screen-xl tracking-wider"></body>
           </Helmet>
           <Navbar></Navbar>
           <div className="w-full text-xl leading-tight md:text-2xl text-gray-800 leading-normal rounded-t mx-auto lg:px-6 pt-16">

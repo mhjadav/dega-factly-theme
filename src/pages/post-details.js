@@ -111,7 +111,8 @@ const PostDetails = ({ data }) => {
                 index={index}
                 postActiveIndex={postActiveIndex}
                 author={false}
-                imageSize="w-1/4 h-10"
+                image={false}
+                tags
                 className="py-2 px-6 border-gray-200"
               />
             ))}

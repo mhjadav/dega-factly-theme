@@ -14,7 +14,7 @@ function ListItems({
   excerpt = false,
   orientation = 'horizontal',
   className = 'p-6 border-gray-200',
-  imageSize = 'w-full'
+  imageSize = 'w-full h-40'
 }) {
   return (
     <div
@@ -28,7 +28,10 @@ function ListItems({
           <div
             className={`flex ${imageSize} justify-start items-start pr-4 py-2`}
           >
-            <img src={img} className="w-full object-cover rounded" />
+            <img
+              src="https://source.unsplash.com/collection/494263/500x500"
+              className="h-full w-full object-cover rounded"
+            />
           </div>
         )}
         <div className="w-full flex flex-col">

@@ -26,3 +26,38 @@ export const True = props => (
     <polygon points="25.608 36.577 19.116 30.086 17.702 31.5 25.608 39.405 42.298 22.715 40.884 21.301" />
   </svg>
 );
+
+export const SliderArrowRight = props => (
+  <svg
+    {...props}
+    id="slider_arrow_right"
+    version="1.1"
+    viewBox="0 0 15 26"
+    xmlSpace="preserve"
+    width="15px"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlnsXlink="http://www.w3.org/1999/xlink"
+  >
+    <polygon
+      fill="#231F20"
+      points="2.019,0.58 -0.035,2.634 10.646,13.316 -0.035,23.997 2.019,26.052 14.755,13.316 "
+    />
+  </svg>
+);
+
+export const SliderArrowLeft = props => (
+  <svg
+    {...props}
+    id="slider_arrow_left"
+    version="1.1"
+    viewBox="0 0 15 26"
+    xmlSpace="preserve"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlnsXlink="http://www.w3.org/1999/xlink"
+  >
+    <polygon
+      fill="#231F20"
+      points="12.885,0.58 14.969,2.664 4.133,13.5 14.969,24.336 12.885,26.42 2.049,15.584 -0.035,13.5 "
+    />
+  </svg>
+);

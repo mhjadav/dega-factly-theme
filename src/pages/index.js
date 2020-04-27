@@ -52,15 +52,8 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
       <div className="flex flex-row justify-between lg:border-b">
-        <div className="sidebar lg:flex lg:w-1/4 border-r border-l sticky">
+        <div className="sidebar xl:flex xl:w-1/4 border-r border-l sticky">
           <div className="block">
-            <div className="flex w-full justify-start items-start p-4">
-              <img
-                alt=""
-                src="https://factly.in/wp-content/uploads//2018/09/banner-survey-side.png"
-                className="w-full object-cover rounded"
-              />
-            </div>
             <div className="mb-4 border-b py-4 px-6">
               <h5 className="heading">Headlines</h5>
             </div>
@@ -73,9 +66,16 @@ const IndexPage = ({ data }) => {
                 className="py-2 px-6 border-gray-200"
               />
             ))}
+            <div className="flex w-full justify-start items-start p-4">
+              <img
+                alt=""
+                src="https://factly.in/wp-content/uploads//2018/09/banner-survey-side.png"
+                className="w-full object-cover rounded"
+              />
+            </div>
           </div>
         </div>
-        <div className="main-content lg:w-2/4">
+        <div className="main-content w-full md:w-3/4 xl:w-2/4 mx-auto">
           {/* <div className="mb-4 pb-4 border-b">
               <h5 className="font-semibold text-2xl leading-tight text-gray-900">
                 Top In Factchecks
@@ -141,13 +141,13 @@ const IndexPage = ({ data }) => {
                   index={index}
                   tags
                   excerpt
-                  imageSize="w-full md:w-1/3 h-auto md:h-24 py-4 md:py-0"
+                  imageSize="w-full md:w-1/3 h-48 md:h-full py-4 md:py-0"
                 />
               ))}
             </InfiniteScroll>
           </div>
         </div>
-        <div className="sidebar lg:flex lg:w-1/4 border-l sticky">
+        <div className="sidebar lg:flex lg:w-2/6 xl:w-1/4 border-l sticky">
           <div className="block">
             <div className="mb-4 pb-4 border-b px-6">
               <h5 className="heading">Top In Factchecks</h5>
@@ -155,6 +155,7 @@ const IndexPage = ({ data }) => {
             {items.slice(0, 10).map((item, index) => (
               <ListItems
                 orientation="vertical"
+                imageSize="h-40"
                 tags
                 item={item}
                 index={index}
