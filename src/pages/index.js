@@ -92,11 +92,6 @@ const IndexPage = ({ data }) => {
       <div className="flex flex-row justify-between lg:border-b">
         <div className="sidebar lg:flex lg:w-1/4 border-r border-l sticky">
           <div className="block">
-            <div className="mb-4 pb-4 border-b px-6">
-              <h5 className="font-thin text-xl leading-tight">
-                Selected stories for you
-              </h5>
-            </div>
             {items.slice(0, 10).map((item, index) => (
               <ListItems
                 item={item}
@@ -183,9 +178,7 @@ const IndexPage = ({ data }) => {
         <div className="sidebar lg:flex lg:w-1/4 border-l sticky">
           <div className="block">
             <div className="mb-4 pb-4 border-b px-6">
-              <h5 className="font-thin text-xl leading-tight">
-                Top In Factchecks
-              </h5>
+              <h5 className="heading">Top In Factchecks</h5>
             </div>
             {items.slice(0, 10).map((item, index) => (
               <ListItems orientation="vertical" item={item} index={index} />

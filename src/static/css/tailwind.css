@@ -42,6 +42,14 @@ body::-webkit-scrollbar-thumb {
     @apply hidden flex-col w-full pt-16 sticky overflow-y-hidden;
 }
 
+.slider {
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+}
+.heading {
+    @apply uppercase text-xl font-bold;
+}
+
 .sidebar:hover {
     overflow-y: overlay;
 }

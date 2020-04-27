@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState, useMemo } from 'react';
 import PropTypes from 'prop-types';
 import AuthorSingle from './author-single';
 import AuthorMultiple from './author-multiple';
@@ -11,15 +11,27 @@ const postContent =
 function Post({ observer, index }) {
   const headerSocialIcon = useRef(null);
   const postSection = useRef(null);
-
-  const handleOnClickClaim = event => {
-    const id = event.target.getAttribute('href-id');
-    document.getElementById(id).scrollIntoView({
-      behavior: 'smooth',
-      block: 'start',
-      inline: 'nearest'
-    });
+  const sliderElement = useRef(null);
+  const [scrollWidth, setScrollWidth] = useState(0);
+  const handleNextClick = () => {
+    sliderElement.current.scrollLeft += scrollWidth;
   };
+
+  const handlePrevClick = () => {
+    sliderElement.current.scrollLeft -= scrollWidth;
+  };
+
+  useEffect(() => {
+    if (sliderElement.current.childElementCount <= 1) {
+      sliderElement.current.style = { 'overflow-x': 'unset' };
+      return false;
+    }
+    const maxScroll = Math.round(
+      sliderElement.current.children[1].getBoundingClientRect().x -
+        sliderElement.current.firstElementChild.getBoundingClientRect().x
+    );
+    setScrollWidth(maxScroll);
+  }, []);
   useEffect(() => {
     observer.observe(headerSocialIcon.current);
     observer.observe(postSection.current);
@@ -119,36 +131,40 @@ function Post({ observer, index }) {
           </p>
         </div>
       </div>
-      <h2 className="font-bold w-full py-2 text-xl">List of claims</h2>
-      <div className="flex flex-col md:flex-row">
-        {[1, 2, 3, 4].map(item => (
-          <button
-            type="button"
-            onClick={handleOnClickClaim}
-            href-id={`claim-${item}`}
-            className={`border border-gray-200 rounded text-white text-left text-lg p-2 mx-2
-
-            ${item === 1 && 'bg-red-600'}
-            ${item === 2 && 'bg-gray-600'}
-            ${item === 3 ? 'bg-green-600' : 'bg-gray-600'}
-            `}
-          >
-            Indian Railways is not deducting
-          </button>
-        ))}
-      </div>
+      <h2 className="w-full py-2 heading">List of claims</h2>
 
       <div className="w-full lg:w-3/4 mx-auto font-sans text-xl">
-        <div className="flex overflow-x-auto py-6">
-          {[1, 2].map(i => (
+        <div className="flex flex-row justify-between">
+          <button
+            type="button"
+            onClick={handlePrevClick}
+            href-id="claim-1"
+            className="border border-gray-200 bg-gray-400 rounded uppercase text-left text-lg p-2"
+          >
+            {'<'}
+          </button>
+          <button
+            type="button"
+            onClick={handleNextClick}
+            href-id="claim-1"
+            className="border border-gray-200 bg-gray-400 rounded uppercase text-left text-lg p-2"
+          >
+            {'>'}
+          </button>
+        </div>
+        <div
+          ref={sliderElement}
+          className="flex overflow-x-auto scrolling-touch slider py-6"
+        >
+          {[1, 2, 4, 5, 6].map(i => (
             <div
               id={`claim-${i}`}
-              className="inline-block flex-none w-full  pt-20 mr-6"
+              className="inline-block flex-none w-full mr-6"
             >
               <div className="w-full flex flex-col  border rounded shadow-lg">
                 <div className="flex justify-center items-center">
                   <div className="flex p-4">
-                    <h2 className="font-bold P-2">Sources:</h2>
+                    <h2 className="font-bold P-2">Claiment {i}:</h2>
                     <a
                       className="block px-2 py-1 font-semibold rounded hover:bg-gray-800"
                       href="/"
@@ -231,16 +247,6 @@ function Post({ observer, index }) {
                     Let’s try to analyze the claim made in the post.
                   </p>
                 </div>
-                <p className="p-4">
-                  A message is being shared widely on social media with a claim
-                  that Indian Railways has cancelled around 39 lakh tickets and
-                  are deducting around 20 rupees on every ticket. Let’s try to
-                  analyze the claim made in the post. A message is being shared
-                  widely on social media with a claim that Indian Railways has
-                  cancelled around 39 lakh tickets and are deducting around 20
-                  rupees on every ticket. Let’s try to analyze the claim made in
-                  the post.
-                </p>
                 {i === 1 ? (
                   <a
                     href="/"
