@@ -157,6 +157,7 @@ export default function Navbar({ fixed }) {
                           author={false}
                           tags
                           image={false}
+                          className="py-2 px-6 border-gray-200"
                         />
                       ))}
                     </div>

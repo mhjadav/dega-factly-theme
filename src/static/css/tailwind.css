@@ -21,8 +21,11 @@ div::-webkit-scrollbar-thumb {
 }
 
 body, html{
+    @apply scrolling-touch;
     scrollbar-width: thin;
     scrollbar-color: #e83745 white;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
 }
 body::-webkit-scrollbar {
     width: 8px;
@@ -39,7 +42,7 @@ body::-webkit-scrollbar-thumb {
 .sidebar {
     height: 100vh;
     top: 0;
-    @apply hidden flex-col w-full pt-16 sticky overflow-y-hidden;
+    @apply hidden flex-col w-full pt-20 sticky overflow-y-hidden;
 }
 
 .slider {
@@ -69,7 +72,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .main-content {
-    @apply flex flex-col pt-6;
+    @apply flex flex-col pt-16;
 }
 
 a:hover{

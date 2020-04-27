@@ -21,7 +21,7 @@ function ListItems({
       className={`flex flex-col leading-tight border-b last:border-b-0 ${className}`}
     >
       <Link
-        to="post-details"
+        to={item.slug ? `#${item.slug}` : '/post-details'}
         className={`w-full flex ${orientation} no-underline hover:no-underline`}
       >
         {image && (
@@ -29,7 +29,7 @@ function ListItems({
             className={`flex ${imageSize} justify-start items-start pr-4 py-2`}
           >
             <img
-              src="https://source.unsplash.com/collection/494263/500x500"
+              src="https://source.unsplash.com/collection/9419734/240x240"
               className="h-full w-full object-cover rounded"
             />
           </div>
