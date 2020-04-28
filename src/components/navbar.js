@@ -1,5 +1,4 @@
 import React from 'react';
-
 import { Link } from 'gatsby';
 import logo from '../static/images/logo/logo.png';
 import MenuItems from './menuItems';
@@ -14,12 +13,6 @@ const menuItems = Array(20).fill({
   time: '2 Min'
 });
 export default function Navbar({ fixed }) {
-  // TODO: Need to refactor this states
-  const [navbarOpen, setNavbarOpen] = React.useState(false);
-  const [factcheck, setFactcheck] = React.useState(false);
-  const [stories, setStories] = React.useState(false);
-  const [editions, setEditions] = React.useState(false);
-
   return (
     <React.Fragment>
       {/* {navbarOpen && (
@@ -131,8 +124,7 @@ export default function Navbar({ fixed }) {
                     index={index}
                     author={false}
                     tags
-                    image={false}
-                    className="py-2 px-6 border-gray-200"
+                    imageSize="w-1/4 h-20"
                   />
                 ))}
               </MenuItems>
@@ -155,12 +147,12 @@ export default function Navbar({ fixed }) {
               </Link>
             </div>
             <div className="hidden lg:order-3 lg:flex flex-1 items-center justify-end">
-              <button
-                type="button"
+              <Link
+                to="/about"
                 className="block px-2 lg:px-4 uppercase font-semibold focus:outline-none"
               >
-                Emails
-              </button>
+                About Us
+              </Link>
               <MenuItems align="right" title="editions">
                 <div className="py-2 border-b border-gray-500">
                   <h5 className="text-md font-normal leading-tight text-gray-700 uppercase">
@@ -193,7 +185,6 @@ export default function Navbar({ fixed }) {
                   ))}
                 </div>
               </MenuItems>
-
               <button
                 type="button"
                 className="block lg:px-4 uppercase font-semibold focus:outline-none bg-gray-300 rounded p-2"
