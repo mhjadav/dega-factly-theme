@@ -6,7 +6,6 @@ import '../static/css/tailwind.css';
 import Navbar from './navbar';
 import Footer from './footer';
 
-const maxWidth = 'max-width: 1920px';
 const Layout = props => (
   <StaticQuery
     query={graphql`
@@ -53,13 +52,13 @@ const Layout = props => (
             link={[{ rel: 'canonical', href: siteMetadata.siteUrl }]}
           >
             <html lang={siteMetadata.lang} />
-            <body
-              style={maxWidth}
-              className="bg-white text-gray-900 leading-normal mx-auto tracking-wider"
-            ></body>
+            <body className="bg-white text-gray-900 leading-normal mx-auto tracking-wider"></body>
           </Helmet>
           <Navbar></Navbar>
-          <div className="w-full text-xl md:text-2xl text-gray-800 leading-normal lg:px-6 mt-10 pt-4">
+          <div
+            style={{ maxWidth: '1920px' }}
+            className="w-full text-xl md:text-2xl text-gray-800 leading-normal lg:px-6 mt-10 pt-4"
+          >
             {children}
           </div>
           {/* <Footer></Footer> */}
