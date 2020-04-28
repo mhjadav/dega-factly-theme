@@ -207,6 +207,7 @@ const About = ({ data }) => {
           </section>
         </div>
       </div>
+      <Footer full></Footer>
     </Layout>
   );
 };

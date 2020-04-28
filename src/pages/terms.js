@@ -194,6 +194,7 @@ const Terms = ({ data }) => {
           </section>
         </div>
       </div>
+      <Footer full></Footer>
     </Layout>
   );
 };
