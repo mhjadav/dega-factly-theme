@@ -31,8 +31,8 @@ export default function Navbar({ fixed }) {
         className="fixed top-0 inset-x-0 bg-white border-b border-gray-300 z-10 fadeInUp"
         style={{ animationDelay: `${0.5}s` }}
       >
-        <header className="flex item-center justify-between border-b  border-gray-100 p-2 text-md text-gray-800">
-          <nav className="flex flex-grow items-center justify-between px-0 lg:px-4 py-3 sm:p-0 uppercase">
+        <header className="flex item-center justify-between border-b  border-gray-100 p-2 text-sm text-gray-800">
+          <nav className="flex flex-grow items-center justify-between px-0 lg:px-4 py-3 sm:p-0">
             <div className="flex flex-1 order-2 lg:order-1 items-center justify-end lg:justify-start">
               <div className="order-3 lg:order-1">
                 <button
@@ -201,15 +201,24 @@ export default function Navbar({ fixed }) {
               <img className="h-8" src={logo} alt="factly"></img>
             </div>
             <div className="hidden lg:order-3 lg:flex flex-1 items-center justify-end">
-              <a href="/" className="block px-4 py-2">
-                Account Setting
-              </a>
-              <a
-                href="/"
-                className="block px-4 py-2 border-gray-300 rounded bg-gray-400 text-center"
+              <button
+                type="button"
+                className="block px-2 lg:px-4 uppercase focus:outline-none"
+              >
+                Emails
+              </button>
+              <button
+                type="button"
+                className="block px-2 lg:px-4 uppercase focus:outline-none"
+              >
+                Editions
+              </button>
+              <button
+                type="button"
+                className="block lg:px-4 uppercase focus:outline-none bg-gray-300 rounded p-2"
               >
                 Subscribe
-              </a>
+              </button>
             </div>
           </nav>
         </header>

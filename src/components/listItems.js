@@ -4,9 +4,21 @@ import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 import img from '../static/images/i.jpg';
 
+const LinkElement = ({ hashRoute, ...props }) =>
+  hashRoute ? (
+    <a href={props.to} className={props.className}>
+      {props.children}
+    </a>
+  ) : (
+    <Link to={props.to} className={props.className}>
+      {props.children}
+    </Link>
+  );
+
 function ListItems({
   item,
   postActiveIndex = 0,
+  hashRoute = false,
   index,
   image = true,
   author = true,
@@ -20,8 +32,9 @@ function ListItems({
     <div
       className={`flex flex-col leading-tight border-b last:border-b-0 ${className}`}
     >
-      <Link
-        to={item.slug ? `#${item.slug}` : '/post-details'}
+      <LinkElement
+        hashRoute={hashRoute}
+        to={item.slug ? `${item.slug}` : '/post-details'}
         className={`w-full flex ${orientation} no-underline hover:no-underline`}
       >
         {image && (
@@ -29,6 +42,7 @@ function ListItems({
             className={`flex ${imageSize} justify-start items-start pr-4 py-2`}
           >
             <img
+              alt=""
               src="https://source.unsplash.com/collection/9419734/240x240"
               className="h-full w-full object-cover rounded"
             />
@@ -43,7 +57,7 @@ function ListItems({
           <div
             id={`nav-${index}`}
             className={`w-full break-all font-bold font-sans text-base text-gray-800 ${postActiveIndex ===
-              index && 'active'}`}
+              (item.slug || index) && 'active'}`}
           >
             {item.title}
           </div>
@@ -53,7 +67,7 @@ function ListItems({
             </p>
           )}
         </div>
-      </Link>
+      </LinkElement>
       {author && (
         <div className="flex mt-auto py-2">
           {orientation !== 'vertical' && (

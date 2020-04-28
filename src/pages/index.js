@@ -21,27 +21,27 @@ const items = Array(20).fill({
 const topCategory = [
   {
     title: 'Goverment of India',
-    slug: 'goverment-of-india'
+    slug: '#goverment-of-india'
   },
   {
     title: 'Coronavirus',
-    slug: 'coronavirus'
+    slug: '#coronavirus'
   },
   {
     title: 'Business In India',
-    slug: 'business-in-india'
+    slug: '#business-in-india'
   },
   {
     title: 'Goverment of India',
-    slug: 'goverment-of-india'
+    slug: '#goverment-of-india'
   },
   {
     title: 'Coronavirus',
-    slug: 'coronavirus'
+    slug: '#coronavirus'
   },
   {
     title: 'Business In India',
-    slug: 'business-in-india'
+    slug: '#business-in-india'
   }
 ];
 const IndexPage = ({ data }) => {
@@ -65,6 +65,7 @@ const IndexPage = ({ data }) => {
             </div>
             {topCategory.map((item, index) => (
               <ListItems
+                hashRoute
                 item={item}
                 index={index}
                 image={false}
