@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState, useMemo } from 'react';
 import PropTypes from 'prop-types';
-import AuthorSingle from './author-single';
-import AuthorMultiple from './author-multiple';
+import AuthorSingle from './authorSingle';
+import AuthorMultiple from './authorMultiple';
 import img from '../static/images/i.jpg';
 import { SliderArrowLeft, SliderArrowRight } from './icons';
 
