@@ -190,7 +190,7 @@ const About = ({ data }) => {
             </div>
             <div className="my-6 pb-6 flex flex-wrap">
               {[1, 2, 3, 4, 5].map(() => (
-                <div className="flex flex-col w-full sm:w-1/3 p-4">
+                <div className="flex flex-col w-1/2 sm:w-1/3 p-4">
                   <a href="/" className="font-bold text-xl py-2">
                     John Doe
                   </a>
