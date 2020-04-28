@@ -59,7 +59,7 @@ const About = ({ data }) => {
           governance.
         </h1>
       </div>
-      <div className="flex flex-row justify-between p-6">
+      <div className="flex flex-row justify-between p-6 mt-12 md:mt-0">
         <div className="sidebar md:flex md:w-1/4 border-r sticky">
           <div className="block">
             {menuItems.map((item, index) => (
