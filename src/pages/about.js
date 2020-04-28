@@ -51,7 +51,7 @@ const About = ({ data }) => {
 
   return (
     <Layout>
-      <div className="my-24 p-6">
+      <div className="hidden md:block my-24 p-6">
         <h1 className="font-bold text-5xl leading-tight text-center">
           Factly will transform the public information landscape and spearhead
           citizen engagement with public data to evolve into a reliable and

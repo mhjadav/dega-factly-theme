@@ -123,7 +123,6 @@ export default function Navbar({ fixed }) {
                     </Link>
                   ))}
                 </div>
-                )}
               </MenuItems>
               <MenuItems title="stories">
                 {menuItems.map((item, index) => (

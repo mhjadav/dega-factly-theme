@@ -3,13 +3,16 @@ import React, { useState } from 'react';
 function MenuItems({ title, Icon, align = 'left', className, children }) {
   const [show, setShow] = useState(false);
   return (
-    <div onMouseEnter={() => setShow(true)} onMouseLeave={() => setShow(false)}>
-      <button
-        type="button"
-        className="block px-2 lg:px-4 uppercase font-semibold focus:outline-none hover:text-gray-600"
-      >
+    <button
+      onMouseEnter={() => setShow(true)}
+      onMouseLeave={() => setShow(false)}
+      onClick={() => setShow(!show)}
+      type="button"
+      className="block px-2 lg:px-4 text-left focus:outline-none"
+    >
+      <span className="uppercase font-semibold focus:outline-none hover:text-gray-600">
         {title || <Icon show={show} />}
-      </button>
+      </span>
       {show && (
         <div
           className={`fixed ${align}-0 lg:${align}-0 w-full lg:w-2/5 pt-5 normal-case`}
@@ -20,7 +23,7 @@ function MenuItems({ title, Icon, align = 'left', className, children }) {
           </div>
         </div>
       )}
-    </div>
+    </button>
   );
 }
 
