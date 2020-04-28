@@ -35,7 +35,7 @@ export default function Navbar({ fixed }) {
         className="fixed top-0 inset-x-0 bg-white border-b border-gray-300 z-10 fadeInUp"
         style={{ animationDelay: `${0.5}s` }}
       >
-        <header className="flex item-center justify-between border-b  border-gray-100 p-2 text-sm text-gray-800">
+        <header className="flex item-center justify-between border-b  border-gray-100 p-2 text-sm font-semibold text-gray-800">
           <nav className="flex flex-grow items-center justify-between px-0 lg:px-4 py-3 sm:p-0">
             <div className="flex flex-1 order-2 lg:order-1 items-center justify-end lg:justify-start">
               <div
@@ -46,7 +46,7 @@ export default function Navbar({ fixed }) {
               >
                 <button
                   type="button"
-                  className="block px-2 lg:px-4 uppercase focus:outline-none"
+                  className="block px-2 lg:px-4 uppercase font-semibold focus:outline-none"
                 >
                   <svg
                     className="fill-current w-4 h-4"
@@ -150,7 +150,7 @@ export default function Navbar({ fixed }) {
               >
                 <button
                   type="button"
-                  className="block px-2 lg:px-4 uppercase focus:outline-none"
+                  className="block px-2 lg:px-4 uppercase font-semibold focus:outline-none"
                 >
                   Stories
                 </button>
@@ -182,7 +182,7 @@ export default function Navbar({ fixed }) {
               >
                 <button
                   type="button"
-                  className="block px-2 lg:px-4 uppercase focus:outline-none"
+                  className="block px-2 lg:px-4 uppercase font-semibold focus:outline-none"
                 >
                   Factcheck
                 </button>
@@ -213,7 +213,7 @@ export default function Navbar({ fixed }) {
             <div className="hidden lg:order-3 lg:flex flex-1 items-center justify-end">
               <button
                 type="button"
-                className="block px-2 lg:px-4 uppercase focus:outline-none"
+                className="block px-2 lg:px-4 uppercase font-semibold focus:outline-none"
               >
                 Emails
               </button>
@@ -224,7 +224,7 @@ export default function Navbar({ fixed }) {
               >
                 <button
                   type="button"
-                  className="block px-2 lg:px-4 uppercase focus:outline-none"
+                  className="block px-2 lg:px-4 uppercase font-semibold focus:outline-none"
                 >
                   Editions
                 </button>
@@ -272,7 +272,7 @@ export default function Navbar({ fixed }) {
 
               <button
                 type="button"
-                className="block lg:px-4 uppercase focus:outline-none bg-gray-300 rounded p-2"
+                className="block lg:px-4 uppercase font-semibold focus:outline-none bg-gray-300 rounded p-2"
               >
                 Subscribe
               </button>
