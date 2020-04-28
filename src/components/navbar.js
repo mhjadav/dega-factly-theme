@@ -15,6 +15,7 @@ const menuItems = Array(20).fill({
   time: '2 Min'
 });
 export default function Navbar({ fixed }) {
+  // TODO: Need to refactor this states
   const [navbarOpen, setNavbarOpen] = React.useState(false);
   const [factcheck, setFactcheck] = React.useState(false);
   const [stories, setStories] = React.useState(false);
