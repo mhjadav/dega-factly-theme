@@ -30,7 +30,7 @@ export default function Navbar({ fixed }) {
         <header className="flex item-center justify-between border-b  border-gray-100 p-2 text-sm font-semibold text-gray-800">
           <nav className="flex flex-grow items-center justify-between px-0 lg:px-4 py-3 sm:p-0">
             <div className="flex flex-1 order-2 lg:order-1 items-center justify-end lg:justify-start">
-              <MenuItems
+              <MenuItems className="order-3 lg:order-1"
                 Icon={({ show }) => (
                   <svg
                     className="fill-current w-4 h-4"
@@ -117,7 +117,7 @@ export default function Navbar({ fixed }) {
                   ))}
                 </div>
               </MenuItems>
-              <MenuItems title="stories">
+              <MenuItems className="order-2" title="stories">
                 {menuItems.map((item, index) => (
                   <ListItems
                     item={item}
@@ -128,7 +128,7 @@ export default function Navbar({ fixed }) {
                   />
                 ))}
               </MenuItems>
-              <MenuItems title="factcheck">
+              <MenuItems className="order-1 lg:order-3" title="factcheck">
                 {menuItems.map((item, index) => (
                   <ListItems
                     item={item}

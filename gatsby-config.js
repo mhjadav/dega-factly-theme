@@ -1,98 +1,87 @@
 require('dotenv').config();
 const path = require('path');
 
-const resolveConfig = require('tailwindcss/resolveConfig');
 const tailwindConfig = require('./tailwind.config.js');
-
-const fullConfig = resolveConfig(tailwindConfig);
-const tailwind = require(`tailwindcss`)(tailwindConfig);
-const autoPrefixer = require(`autoprefixer`);
+const autoprefixer = require(`autoprefixer`)
 const cssnano = require(`cssnano`);
-const {
-  name,
-  shortName,
-  title,
-  description,
-  themeColor,
-  backgroundColor,
-  siteUrl,
-  logo,
-  author,
-  type,
-  googleAnalyticsID,
-  favicon
-} = require('./data/site-config');
+const localMetadata = require('./data/site-config');
 
-module.exports = {
-  siteMetadata: {
-    title,
-    description,
-    author,
-    siteUrl,
-    logo,
-    type,
-    favicon
-  },
-  plugins: [
-    'gatsby-plugin-react-helmet',
-    {
-      resolve: 'gatsby-plugin-google-analytics',
-      options: {
-        trackingId: googleAnalyticsID,
-        head: true
-      }
-    },
-    {
-      resolve: `gatsby-plugin-postcss`,
-      options: {
-        postCssPlugins: [
-          tailwind,
-          autoPrefixer,
-          ...(process.env.NODE_ENV === `production` ? [] : [cssnano])
-        ]
-      }
-    },
-    {
-      resolve: `gatsby-plugin-purgecss`,
-      options: {
-        printRejected: true, // Print removed selectors and processed file names
-        // develop: true, // Enable while using `gatsby develop`
-        tailwind: true // Enable tailwindcss support
-        // whitelist: ['whitelist'], // Don't remove this selector
-        // ignore: ['/ignored.css', 'prismjs/', 'docsearch.js/'], // Ignore files/folders
-        // purgeOnly : ['components/', '/main.css', 'bootstrap/'], // Purge only these files/folders
-      }
-    },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        name: 'images',
-        path: path.join(__dirname, `src`, `static/images`)
-      }
-    },
-    'gatsby-plugin-sharp',
-    'gatsby-transformer-sharp',
-    {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name,
-        short_name: shortName,
-        start_url: '/',
-        background_color: backgroundColor,
-        theme_color: themeColor,
-        display: 'minimal-ui',
-        icon: favicon
-      }
-    },
-    'gatsby-plugin-offline',
-    'gatsby-plugin-sitemap',
-    {
-      resolve: 'gatsby-plugin-robots-txt',
-      options: {
-        host: siteUrl,
-        sitemap: `${siteUrl}/sitemap.xml`,
-        policy: [{ userAgent: '*', disallow: '' }]
-      }
-    }
-  ]
+module.exports =  ({ client = '', metaData = {}, tailwindCustomConfig = {}}) => {
+  const siteMetadata= {...localMetadata, ...metaData};
+  return {
+    siteMetadata,
+    plugins: [
+      'gatsby-plugin-react-helmet',
+      {
+        resolve: 'gatsby-plugin-google-analytics',
+        options: {
+          trackingId: siteMetadata.googleAnalyticsID,
+          head: true,
+        },
+      },
+      {
+        resolve: 'gatsby-source-filesystem',
+        options: {
+          name: 'images',
+          path: path.join(__dirname, `src`, `static/images`),
+        },
+      },
+      {
+        resolve: 'gatsby-source-graphql',
+        options: {
+          typeName: 'Dega',
+          fieldName: 'siteContent',
+          url: 'https://api.degacms.com/query',
+          headers: {
+            client: client,
+          },
+        },
+      },
+      'gatsby-plugin-sharp',
+      'gatsby-transformer-sharp',
+      {
+        resolve: `gatsby-plugin-postcss`,
+        options: {
+          postCssPlugins: [
+            require(`tailwindcss`)({...tailwindConfig, ...tailwindCustomConfig}), 
+            autoprefixer, 
+            cssnano
+          ]
+        },
+      },
+      {
+        resolve: `gatsby-plugin-purgecss`,
+        options: {
+          printRejected: true,
+          develop: true,
+          tailwind: true,
+          content: [
+            path.join( process.cwd(), '../factly-dega-theme/src/**/!(*.d).{ts,js,jsx,tsx}' ),
+          ],
+        },
+      },
+      {
+        resolve: `gatsby-plugin-manifest`,
+        options: {
+          name: siteMetadata.name,
+          short_name: siteMetadata.shortName,
+          start_url: siteMetadata.siteUrl,
+          background_color: siteMetadata.backgroundColor,
+          theme_color: siteMetadata.themeColor,
+          display: 'minimal-ui',
+          icon: siteMetadata.favicon,
+        },
+      },
+      'gatsby-plugin-offline',
+      'gatsby-plugin-sitemap',
+      {
+        resolve: 'gatsby-plugin-robots-txt',
+        options: {
+          host: metaData.siteUrl,
+          sitemap: `${metaData.siteUrl}/sitemap.xml`,
+          policy: [{ userAgent: '*', disallow: '' }],
+        },
+      },
+    ],
+  }
 };

@@ -2,14 +2,12 @@ import React from 'react';
 import { graphql, StaticQuery } from 'gatsby';
 import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
-import '../static/css/tailwind.css';
 import Navbar from './navbar';
-import Footer from './footer';
 
 const Layout = props => (
   <StaticQuery
     query={graphql`
-      query IndexPage {
+      query Layout {
         site {
           siteMetadata {
             description

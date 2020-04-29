@@ -9,7 +9,7 @@ module.exports = {
   type: 'website',
   author: 'Mahipat',
   lang: 'en',
-  googleAnalyticsID: '', // GA tracking ID.
+  googleAnalyticsID: 'UA-1234', // GA tracking ID.
   backgroundColor: '#fff',
   themeColor: '#fff',
   favicon: `${__dirname}/../src/static/images/favicon.png`

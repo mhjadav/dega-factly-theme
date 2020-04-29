@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function MenuItems({ title, Icon, align = 'left', className, children }) {
+function MenuItems({ title, Icon, align = 'left', className = '', children }) {
   const [show, setShow] = useState(false);
   return (
     <button
@@ -8,7 +8,7 @@ function MenuItems({ title, Icon, align = 'left', className, children }) {
       onMouseLeave={() => setShow(false)}
       onClick={() => setShow(!show)}
       type="button"
-      className="block px-2 lg:px-4 text-left focus:outline-none"
+      className={`block px-2 lg:px-4 text-left focus:outline-none ${className}`}
     >
       <span className="uppercase font-semibold focus:outline-none hover:text-gray-600">
         {title || <Icon show={show} />}

@@ -20,7 +20,7 @@ const items = Array(20).fill({
 
 const topCategory = [
   {
-    title: 'Goverment of India',
+    title: 'Goverment2 of India',
     slug: '#goverment-of-india'
   },
   {
