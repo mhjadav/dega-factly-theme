@@ -24,7 +24,7 @@ const topCategory = [
     slug: '#goverment-of-india'
   },
   {
-    title: 'Coronavirus',
+    title: 'Coronavirus 0',
     slug: '#coronavirus'
   },
   {
@@ -44,7 +44,7 @@ const topCategory = [
     slug: '#business-in-india'
   }
 ];
-const IndexPage = ({ data }) => {
+function IndexPage({ data }) {
   const [postItems, setPostItems] = useState(items.slice(0, 2));
   const [hasNextPage, setHasNextPage] = useState(true);
 
@@ -230,7 +230,7 @@ const IndexPage = ({ data }) => {
       </div>
     </Layout>
   );
-};
+}
 
 IndexPage.propTypes = {
   data: PropTypes.shape({
