@@ -92,7 +92,7 @@ const PostDetails = ({ data }) => {
       <div className="flex flex-row justify-between">
         <div className="sidebar lg:flex lg:w-1/4 border-r border-l sticky">
           <div className="mb-4 pb-4 border-b px-6">
-            <h5 className="heading">Related Posts</h5>
+            <h5 className="heading">Other Posts</h5>
           </div>
           <InfiniteScroll
             pageStart={0}

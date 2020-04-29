@@ -131,7 +131,6 @@ function Post({ observer, index }) {
           </p>
         </div>
       </div>
-      <h2 className="w-full py-2 heading">List of claims</h2>
 
       <div className="w-full lg:w-3/4 mx-auto font-sans text-xl">
         <div className="flex flex-row justify-between pt-6 pb-2">
@@ -143,6 +142,7 @@ function Post({ observer, index }) {
           >
             <SliderArrowLeft className="fill-current w-4 h-4"></SliderArrowLeft>
           </button>
+          <h2 className="w-full py-2 heading text-center">List of claims</h2>
           <button
             type="button"
             onClick={handleNextClick}
