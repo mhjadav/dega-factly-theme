@@ -2,12 +2,17 @@ require('dotenv').config();
 const path = require('path');
 
 const tailwindConfig = require('./tailwind.config.js');
-const autoprefixer = require(`autoprefixer`)
+
+const autoprefixer = require(`autoprefixer`);
 const cssnano = require(`cssnano`);
 const localMetadata = require('./data/site-config');
 
-module.exports =  ({ client = '', metaData = {}, tailwindCustomConfig = {}}) => {
-  const siteMetadata= {...localMetadata, ...metaData};
+module.exports = ({
+  client = '',
+  metaData = {},
+  tailwindCustomConfig = {}
+}) => {
+  const siteMetadata = { ...localMetadata, ...metaData };
   return {
     siteMetadata,
     plugins: [
@@ -16,15 +21,15 @@ module.exports =  ({ client = '', metaData = {}, tailwindCustomConfig = {}}) => 
         resolve: 'gatsby-plugin-google-analytics',
         options: {
           trackingId: siteMetadata.googleAnalyticsID,
-          head: true,
-        },
+          head: true
+        }
       },
       {
         resolve: 'gatsby-source-filesystem',
         options: {
           name: 'images',
-          path: path.join(__dirname, `src`, `static/images`),
-        },
+          path: path.join(__dirname, `src`, `static/images`)
+        }
       },
       {
         resolve: 'gatsby-source-graphql',
@@ -33,9 +38,9 @@ module.exports =  ({ client = '', metaData = {}, tailwindCustomConfig = {}}) => 
           fieldName: 'siteContent',
           url: 'https://api.degacms.com/query',
           headers: {
-            client: client,
-          },
-        },
+            client
+          }
+        }
       },
       'gatsby-plugin-sharp',
       'gatsby-transformer-sharp',
@@ -43,11 +48,14 @@ module.exports =  ({ client = '', metaData = {}, tailwindCustomConfig = {}}) => 
         resolve: `gatsby-plugin-postcss`,
         options: {
           postCssPlugins: [
-            require(`tailwindcss`)({...tailwindConfig, ...tailwindCustomConfig}), 
-            autoprefixer, 
+            require(`tailwindcss`)({
+              ...tailwindConfig,
+              ...tailwindCustomConfig
+            }),
+            autoprefixer,
             cssnano
           ]
-        },
+        }
       },
       {
         resolve: `gatsby-plugin-purgecss`,
@@ -56,9 +64,13 @@ module.exports =  ({ client = '', metaData = {}, tailwindCustomConfig = {}}) => 
           develop: true,
           tailwind: true,
           content: [
-            path.join( process.cwd(), 'node_modules/gatsby-theme-factly/src/**/!(*.d).{ts,js,jsx,tsx}' ),
-          ],
-        },
+            path.join(process.cwd(), 'src/**/!(*.d).{ts,js,jsx,tsx}'),
+            path.join(
+              process.cwd(),
+              'node_modules/gatsby-theme-factly/src/**/!(*.d).{ts,js,jsx,tsx}'
+            )
+          ]
+        }
       },
       {
         resolve: `gatsby-plugin-manifest`,
@@ -69,8 +81,8 @@ module.exports =  ({ client = '', metaData = {}, tailwindCustomConfig = {}}) => 
           background_color: siteMetadata.backgroundColor,
           theme_color: siteMetadata.themeColor,
           display: 'minimal-ui',
-          icon: siteMetadata.favicon,
-        },
+          icon: siteMetadata.favicon
+        }
       },
       'gatsby-plugin-offline',
       'gatsby-plugin-sitemap',
@@ -79,9 +91,9 @@ module.exports =  ({ client = '', metaData = {}, tailwindCustomConfig = {}}) => 
         options: {
           host: siteMetadata.siteUrl,
           sitemap: `${siteMetadata.siteUrl}/sitemap.xml`,
-          policy: [{ userAgent: '*', disallow: '' }],
-        },
-      },
-    ],
-  }
+          policy: [{ userAgent: '*', disallow: '' }]
+        }
+      }
+    ]
+  };
 };
