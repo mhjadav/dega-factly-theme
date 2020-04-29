@@ -56,7 +56,7 @@ module.exports =  ({ client = '', metaData = {}, tailwindCustomConfig = {}}) => 
           develop: true,
           tailwind: true,
           content: [
-            path.join( process.cwd(), '../factly-dega-theme/src/**/!(*.d).{ts,js,jsx,tsx}' ),
+            path.join( process.cwd(), '../dega-factly-theme/src/**/!(*.d).{ts,js,jsx,tsx}' ),
           ],
         },
       },
