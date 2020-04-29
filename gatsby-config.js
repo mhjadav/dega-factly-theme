@@ -77,8 +77,8 @@ module.exports =  ({ client = '', metaData = {}, tailwindCustomConfig = {}}) => 
       {
         resolve: 'gatsby-plugin-robots-txt',
         options: {
-          host: metaData.siteUrl,
-          sitemap: `${metaData.siteUrl}/sitemap.xml`,
+          host: siteMetadata.siteUrl,
+          sitemap: `${siteMetadata.siteUrl}/sitemap.xml`,
           policy: [{ userAgent: '*', disallow: '' }],
         },
       },
