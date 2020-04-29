@@ -8,7 +8,6 @@ const localMetadata = require('./data/site-config');
 
 module.exports =  ({ client = '', metaData = {}, tailwindCustomConfig = {}}) => {
   const siteMetadata= {...localMetadata, ...metaData};
-  console.log(path.join( process.cwd(), 'node_modules/dega-factly-theme/src/**/!(*.d).{ts,js,jsx,tsx}' ))
   return {
     siteMetadata,
     plugins: [
@@ -57,7 +56,7 @@ module.exports =  ({ client = '', metaData = {}, tailwindCustomConfig = {}}) => 
           develop: true,
           tailwind: true,
           content: [
-            path.join( process.cwd(), 'node_modules/dega-factly-theme/src/**/!(*.d).{ts,js,jsx,tsx}' ),
+            path.join( process.cwd(), 'node_modules/gatsby-theme-factly/src/**/!(*.d).{ts,js,jsx,tsx}' ),
           ],
         },
       },
