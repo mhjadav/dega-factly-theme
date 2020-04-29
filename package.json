@@ -1,5 +1,5 @@
 {
-  "name": "dega-factly-theme",
+  "name": "gatsby-theme-factly",
   "version": "1.0.0",
   "description": "dega cms frontend portal",
   "scripts": {
@@ -15,7 +15,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/mhjadav/dega-factly-theme"
+    "url": "https://github.com/mhjadav/gatsby-theme-factly"
   },
   "devDependencies": {
     "babel-eslint": "^9.0.0",
